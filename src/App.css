@@ -1,0 +1,25 @@
+.App {
+  text-align: center;
+  background-color: #FFFAEB;
+}
+
+.usuario{
+  width: 100%;
+  height: 742px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.costureiro{
+  width: 642px;
+  height: 600px;
+  background-image: url(./imagens/costureiro.svg);
+  background-size: cover;
+}
+.cliente{
+  width: 642px;
+  height: 600px;
+  background-image: url(./imagens/cliente.svg);
+  background-size: cover;
+}

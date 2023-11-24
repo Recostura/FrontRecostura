@@ -1,0 +1,78 @@
+.AreaCostura{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 130vh;
+}
+.Conteiner100 {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100vw;
+    height: 80vh;
+    margin-top: 5vh;
+    
+
+}
+.ConteinerMenor1{
+    height: 66.389vh;
+    width: 38%;
+    background-image: url(../imagens/costureiro.svg);
+    background-size: cover;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    padding-bottom: 10vh;
+}
+.ConteinerMenor1 img {
+    width: 100%;
+    height: auto;
+}
+.ConteinerMenor1 button {
+    background-color: #F1DBFF;
+    width: 50%;
+    height: 30%;
+    border-radius: 20px;
+    border: #F1DBFF solid 1px;
+    font-size: 2em;
+    text-align: center;
+
+}
+.ConteinerMenor1 button:hover{
+    transition: 0.3s;
+    background-color: #FCD0C3;
+    border: #FCD0C3 solid 1px;
+}
+.ConteinerMenor2{
+    height: 66.389vh;
+    width: 38%;
+    background-image: url(../imagens/cliente.svg);
+    background-size: cover;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding-bottom: 10vh;
+}
+.ConteinerMenor2 img {
+    width: 100%;
+    height: auto;
+    background-size: cover;
+}
+.ConteinerMenor2 button {
+    background-color: #FCD0C3;
+    width: 50%;
+    height: 30%;
+    border-radius: 20px;
+    border: #FCD0C3 1px solid;
+    font-size: 2em;
+    text-align: center;
+}
+.ConteinerMenor2 button:hover{
+    transition: 0.3s;
+    background-color: #8F9C92;
+    border: #8F9C92 1px solid;
+}
