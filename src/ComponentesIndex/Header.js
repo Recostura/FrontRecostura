@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import Style from '../css/Header.module.css';
 import logoHome from '../imagens/logoHome.svg';
 import user from '../imagens/user.png'
+import { Link } from "react-router-dom";
 
 function Header (){
 
@@ -28,7 +29,7 @@ function Header (){
         <header className={`${Style.header} ${scrolled ? Style.scrolled : ""}`}>
             <img src={logoHome} className={Style.logoHome} />
             <div className={Style.nomeHome}>Recostura</div>
-            <button className={Style.btLogin}>LOGIN <img src={user} className={Style.user} /></button>
+            <Link to='login'><button className={Style.btLogin}>LOGIN <img src={user} className={Style.user} /></button></Link>
         </header>
 
 

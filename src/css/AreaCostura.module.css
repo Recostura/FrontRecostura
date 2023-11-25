@@ -76,3 +76,8 @@
     background-color: #8F9C92;
     border: #8F9C92 1px solid;
 }
+
+.linkao{
+    text-decoration: none;
+    color: red;
+}
