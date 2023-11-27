@@ -29,7 +29,7 @@ function Header (){
         <header className={`${Style.header} ${scrolled ? Style.scrolled : ""}`}>
             <img src={logoHome} className={Style.logoHome} />
             <div className={Style.nomeHome}>Recostura</div>
-            <Link to='login'><button className={Style.btLogin}>LOGIN <img src={user} className={Style.user} /></button></Link>
+            <Link className={Style.LinkLogin} to='login'><button className={Style.btLogin}>LOGIN <img src={user} className={Style.user} /></button></Link>
         </header>
 
 
