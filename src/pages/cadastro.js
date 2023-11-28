@@ -16,10 +16,10 @@ function Cadastro() {
                     <label>Crie deu cadastro:</label> <br/>
                     <input type="text" placeholder='E-mail:' /> <br/>
 
-                    <label>Senha</label> <br/>
+                    <label>Senha:</label> <br/>
                     <input type="text" placeholder='Senha:'/>
 
-                    <label>Confirme sua senha</label> <br/>
+                    <label>Confirme sua senha:</label> <br/>
                     <input type="text" placeholder='Senha:'/> <br/>
                 </form>
             </section>
@@ -39,13 +39,15 @@ function Cadastro() {
                         </div>
                         <input type="text" placeholder='Celular:' className={Style.clienteNumero}/> <br/>
                     </div>
+                </form>
+            </section>
 
-                    <label>Data de Nascimento</label> <br/>
-                    <div className={Style.date}>
+            {/*<section className={Style.date}>
+                <label>Data de Nascimento</label> <br/>
+
+                <div className={Style.date}>
                     <input type="text" placeholder='Dia'/> <br/>
-                    <input type="text" placeholder='Mês'/> <br/>
-
-                    <datalist id="browsers"/>
+                    <datalist placeholder='Mês'/>
                         <option value="Janeiro"/>
                         <option value="Fevereiro"/>
                         <option value="Março"/>
@@ -59,10 +61,26 @@ function Cadastro() {
                         <option value="Novembro"/>
                         <option value="Dezembro"/>
                     <datalist/>
+                    <input type="text" placeholder='Mês'/> <br/>
+                </div>
 
-                    <input type="text" placeholder='Dia:'/> <br/>
+    </section>*/}
+
+            <section className={Style.forms3}>
+                <p>Localizaçao</p>
+                <forms className={Style.localizacao}>
+                    <input type="text" placeholder='CPE:'/> <br/>
+                    <input type="text" placeholder='Endereço:'/> <br/ >
+
+                    <div className={Style.nBairro}>
+                        <input type="text" placeholder='Nº:'/> <br/>
+                        <input type="text" placeholder='Bairro:'/> <br/>
                     </div>
-                </form>
+                    <div className={Style.estadoP}>
+                        <input type="text" placeholder='Estado:'/> <br/>
+                        <input type="text" placeholder='País:'/> <br/>
+                    </div>  
+                </forms>    
             </section>
 
         </main>
