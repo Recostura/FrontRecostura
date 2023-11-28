@@ -4,6 +4,7 @@
     align-items: center;
     justify-content: space-around;
     height: 130vh;
+    flex-direction: column;
 }
 .Conteiner100 {
     position: relative;
@@ -32,18 +33,18 @@
     height: auto;
 }
 .ConteinerMenor1 button {
-    background-color: #F1DBFF;
+    background-color: #F5B087;
     width: 50%;
     height: 30%;
     border-radius: 20px;
-    border: #F1DBFF solid 1px;
+    border: #F5B087 solid 1px;
     font-size: 2em;
     text-align: center;
 
 }
 .ConteinerMenor1 button:hover{
     transition: 0.3s;
-    background-color: #FCD0C3;
+    background-color: #90B49D;
     border: #FCD0C3 solid 1px;
 }
 .ConteinerMenor2{
@@ -63,21 +64,26 @@
     background-size: cover;
 }
 .ConteinerMenor2 button {
-    background-color: #FCD0C3;
+    background-color: #90B49D;
     width: 50%;
     height: 30%;
     border-radius: 20px;
-    border: #FCD0C3 1px solid;
+    border: #90B49D 1px solid;
     font-size: 2em;
     text-align: center;
 }
 .ConteinerMenor2 button:hover{
     transition: 0.3s;
-    background-color: #8F9C92;
+    background-color: #F5B087;
     border: #8F9C92 1px solid;
 }
 
 .linkao{
     text-decoration: none;
-    color: red;
+    color: #413634;
+    font-size: 37px;
+}
+
+.linhahome{
+    margin-top: -170px;
 }

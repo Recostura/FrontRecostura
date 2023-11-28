@@ -1,0 +1,51 @@
+.caixadoacao{
+    width: 100%;
+    height: 900px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.caixadoacao img{
+    margin-top: 120px;
+    position: relative;
+}
+
+.caixadoar{
+    width: 500px;
+    height: 600px;
+    background-color: #FEC0CF;
+    margin-top: 120px;
+    border-radius: 20px;
+    font-size: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.caixadoar img{
+    width: 450px;
+    height: 550px;
+    top: -90px;
+    z-index: 1;
+}
+
+.caixadoar p{
+    position: relative;
+    width: 400px;
+    top: -50px;
+    z-index: 2;
+}
+
+.botaodoar{
+    background-color: #F5B087;
+    font-size: 45px;
+    width: 320px;
+    height: 80px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+}
