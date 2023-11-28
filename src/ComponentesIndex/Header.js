@@ -30,6 +30,11 @@ function Header (){
             <img src={logoHome} className={Style.logoHome} />
             <div className={Style.nomeHome}>Recostura</div>
             <Link className={Style.LinkLogin} to='login'><button className={Style.btLogin}>LOGIN <img src={user} className={Style.user} /></button></Link>
+            <span className={Style.caixasheader1}></span>
+            <span className={Style.caixasheader2}></span>
+            <span className={Style.caixasheader3}></span>
+            <span className={Style.caixasheader4}></span>
+            <Link to='login'><button className={Style.btLogin}>ACESSE SUA CONTA</button></Link>
         </header>
 
 
