@@ -27,15 +27,7 @@ function Inspiracoes(){
                 <Carousel.Item>
                     <img src={img1} style={{width: '75%'}}/>
                 </Carousel.Item>
-                <Carousel.Item>
-                    <img src={img1} className={Style.carouselImage} alt="Imagem 1" />
-                    <Carousel.Caption>
-                    <div>
-                        <h3>PIPIPI POPOPO</h3>
-                        <p>Conteúdo do Slide 1</p>
-                    </div>
-          </Carousel.Caption>
-        </Carousel.Item>
+                
             </Carousel>
             <img src={maquina} style={{position: 'relative', top: '-180px', opacity: 0.4}}/>
         </main>

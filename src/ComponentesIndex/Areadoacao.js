@@ -15,7 +15,7 @@ function Areadoacao(){
             <div className={Style.caixadoar}>
                 <p>Transformando retalhos em possibilidades e oportunidades!</p>
                 <botton className={Style.botaodoar} type='submit'>Saiba mais</botton>
-                <img src={linhas} style={{position: 'absolute', top: '2020px'}}/>
+                <img src={linhas} style={{position: 'absolute', top: '1990px'}}/>
             </div>
         </main>
     )
