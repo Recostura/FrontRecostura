@@ -1,20 +1,14 @@
-<<<<<<< HEAD
+
 import Header from '../ComponentesIndex/Header';
 
-function cadastro(){
-    return(
-        <Header/>
-    )
-}
 
-export default cadastro;
-=======
 import Style from './css/cadastro.module.css'
 import Button from '../imagens/cadastroButtons.svg'
 
 function Cadastro() {
     return(
         <main className={Style.pageCadastro}>
+            <Header />
 
             <div className={Style.buttonsAndFrase}>
                 <img src={Button} alt='botões' />
@@ -99,4 +93,3 @@ function Cadastro() {
 }
 
 export default Cadastro;
->>>>>>> 71fba37c3b89d9a774f8ba20164dd445122d1690
