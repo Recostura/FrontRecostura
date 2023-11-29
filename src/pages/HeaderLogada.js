@@ -1,20 +1,10 @@
 import { useEffect, useState } from 'react';
-import Style from '../css/Header.module.css';
+import Style from '../pages/css/HeaderLogada.module.css'
 import logoHome from '../imagens/logoHome.svg';
 import user from '../imagens/user.png'
 import { Link } from "react-router-dom";
-import Modal from '../pages/Modal'
 
 function Header (){
-    const [modalIsOpen, setModalIsOpen] = useState(false);
-
-    const openModal = () => {
-        setModalIsOpen(true);
-    };
-
-    const closeModal = () => {
-        setModalIsOpen(false);
-    };
 
     const [scrolled, setScrolled] = useState(false);
 
@@ -43,8 +33,7 @@ function Header (){
             <span className={Style.caixasheader2}></span>
             <span className={Style.caixasheader3}></span>
             <span className={Style.caixasheader4}></span>
-            <button onClick={openModal} className={Style.btLogin}>ACESSE SUA CONTA</button>
-            <Modal isOpen={modalIsOpen} onRequestClose={closeModal} />
+            <Link to='#'><button className={Style.btPerfil}></button></Link>
         </header>
 
 
