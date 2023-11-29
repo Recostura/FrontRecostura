@@ -9,6 +9,7 @@ import Textochamando from '../ComponentesIndex/Textochamando';
 import Footer from '../ComponentesIndex/Footer';
 
 function Index() {
+
     return (
         <div>
             <Header />
