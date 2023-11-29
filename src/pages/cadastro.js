@@ -1,9 +1,8 @@
 
 import Header from '../ComponentesIndex/Header';
-
-
 import Style from './css/cadastro.module.css'
 import Button from '../imagens/cadastroButtons.svg'
+import { Link } from 'react-router-dom';
 
 function Cadastro() {
     return(
@@ -13,12 +12,12 @@ function Cadastro() {
             <div className={Style.buttonsAndFrase}>
                 <img src={Button} alt='botões' />
                 <p>Olá, Costureiro(a)! <br /> Crie sua conta:</p>
-                <img src={Button} alt='botões' />
+                <img src={Button} alt='botões' Link to='AreaPedidos' />
             </div>
 
             <section className={Style.forms1}>
                 <form className={Style.nomeSenha}>
-                    <label>Crie deu cadastro:</label> <br/>
+                    <label>Crie seu cadastro:</label> <br/>
                     <input type="text" placeholder='E-mail:' /> <br/>
 
                     <label>Senha:</label> <br/>
