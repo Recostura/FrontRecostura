@@ -1,0 +1,15 @@
+.Slides{
+    width: 100%;
+    height: 500px;
+    cursor: grab;
+}
+
+.Slides img{
+    width: 100%;
+    height: 600px;
+}
+
+.CarrouseSlide{
+    width: 100%;
+    height: 600px;
+}

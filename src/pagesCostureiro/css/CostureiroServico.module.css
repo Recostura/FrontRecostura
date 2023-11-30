@@ -1,0 +1,67 @@
+main{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.buttonsAndFrase{
+    width: 100%;
+    height: 281px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #FFB6C6;
+}
+
+.buttonsAndFrase img{
+    width: 100px;
+    height: 100px;
+}
+
+.buttonsAndFrase p{
+    font-size: 90px;
+    color: #413634;
+}
+
+.conteudoPedidos{
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 140px 0;
+}
+
+.carrousels{
+    width: 50%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    gap: 120px;
+}
+
+.carrousel{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.perfil{
+    width: 50%;
+    height: 147px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+    font-size: 30px;
+    margin-left: 88px;
+}
+
+.perfil img{
+    width: 95px;
+}
