@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&family=Sacramento&display=swap');
+
+.missao{
+    width: 100%;
+    height: 85vh;
+    background-color: #FEC0CF;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: -55px;
+}
+.logoHome{
+    margin-top: 20px;
+}
+
+.caixaTexto{
+    width: 80%;
+}
+
+.textoMissao{
+    font-family: 'Noto-sans' sans-serif;
+    font-size: 68px;
+    text-align: inherit;
+    margin-top: 30px;
+}
