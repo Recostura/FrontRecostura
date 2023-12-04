@@ -4,6 +4,7 @@ import Header from '../ComponentesIndex/Header';
 
 import Style from './css/cadastro.module.css'
 import Button from '../imagens/cadastroButtons.svg'
+import info from '../imagens/interrogração.svg'
 
 function Cadastro() {
     return(
@@ -18,13 +19,8 @@ function Cadastro() {
 
             <section className={Style.forms1}>
                 <form className={Style.nomeSenha}>
-                    <label>Crie deu cadastro:</label> <br/>
                     <input type="text" placeholder='E-mail:' /> <br/>
-
-                    <label>Senha:</label> <br/>
-                    <input type="text" placeholder='Senha:'/>
-
-                    <label>Confirme sua senha:</label> <br/>
+                    <input type="text" placeholder='Senha:'/> <br />
                     <input type="text" placeholder='Senha:'/> <br/>
                 </form>
             </section>
@@ -47,45 +43,27 @@ function Cadastro() {
                 </form>
             </section>
 
-            {/*<section className={Style.date}>
-                <label>Data de Nascimento</label> <br/>
-
-                <div className={Style.date}>
-                    <input type="text" placeholder='Dia'/> <br/>
-                    <datalist placeholder='Mês'/>
-                        <option value="Janeiro"/>
-                        <option value="Fevereiro"/>
-                        <option value="Março"/>
-                        <option value="Abril"/>
-                        <option value="Maio"/>
-                        <option value="Junho"/>
-                        <option value="Julho"/>
-                        <option value="Agosto"/>
-                        <option value="Setembro"/>
-                        <option value="Outubro"/>
-                        <option value="Novembro"/>
-                        <option value="Dezembro"/>
-                    <datalist/>
-                    <input type="text" placeholder='Mês'/> <br/>
-                </div>
-
-    </section>*/}
-
             <section className={Style.forms3}>
                 <p>Localizaçao</p>
                 <forms className={Style.localizacao}>
-                    <input type="text" placeholder='CPE:'/> <br/>
-                    <input type="text" placeholder='Endereço:'/> <br/ >
+                    <div className={Style.cpe}>
+                        <input type="text" placeholder='CPE:' className={Style.ceep}/> <br/>
+                        <input type="text" placeholder='Endereço:' className={Style.endereço}/> <br/>
+                    </div>
 
                     <div className={Style.nBairro}>
-                        <input type="text" placeholder='Nº:'/> <br/>
-                        <input type="text" placeholder='Bairro:'/> <br/>
+                        <input type="text" placeholder='Nº:' className={Style.Nº}/> <br/>
+                        <input type="text" placeholder='Bairro:' className={Style.bairro}/> <br/>
                     </div>
                     <div className={Style.estadoP}>
-                        <input type="text" placeholder='Estado:'/> <br/>
-                        <input type="text" placeholder='País:'/> <br/>
+                        <input type="text" placeholder='Estado:' className={Style.estado}/> <br/>
+                        <input type="text" placeholder='País:' className={Style.pais}/> <br/>
                     </div>  
-                </forms>    
+                </forms> 
+                <div className={Style.bonus}>
+                    <p>Saldo: R$30,00 (bonus)</p>
+                    < img src={info} alt='ponto de interrogação' />
+                </div>   
             </section>
 
         </main>

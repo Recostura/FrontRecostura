@@ -7,7 +7,7 @@
 
 .buttonsAndFrase{
     width: 100%;
-    height: 281px;
+    height: 600px;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -119,11 +119,87 @@
 
 .localizacao{
     width: 90%;
-    height: auto;
-    background-color: blue;
+    height: 900px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: #ffb6c6;
+    margin: 0 auto;
 
 }
 
-.localizacao input{
-   
+.cpe{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    align-items:center;
+    justify-content: space-evenly;
+}
+
+.ceep{
+    width: 40%;
+    height: 152px;
+    border-radius: 30px;
+}
+
+.endereço{
+    width: 57%;
+    height: 152px;
+    border-radius: 30px;
+}
+
+.nBairro{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    align-items:center;
+    justify-content: space-evenly;
+}
+
+.Nº{
+    width: 30%;
+    height: 152px;
+    border-radius: 30px;  
+}
+
+.bairro{
+    width: 65%;
+    height: 152px;
+    border-radius: 30px;
+}
+
+.estadoP{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    align-items:center;
+    justify-content: space-evenly;
+}
+
+.estado{
+    width: 57%;
+    height: 152px;
+    border-radius: 30px;
+}
+
+.pais{
+    width: 40%;
+    height: 152px;
+    border-radius: 30px;
+}
+
+.bonus{
+    width: 60%;
+    height: 64px;
+    background-color: #fff;
+    border-radius: 30px;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
 }
