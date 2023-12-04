@@ -61,8 +61,12 @@ function Cadastro() {
                     </div>  
                 </forms> 
                 <div className={Style.bonus}>
-                    <p>Saldo: R$30,00 (bonus)</p>
-                    < img src={info} alt='ponto de interrogação' />
+                   <div className={Style.paragraph}>
+                        <p>Saldo: R$30,00 (bonus)</p>
+                   </div>
+                   <div className={Style.buttonInfo}>
+                        < img src={info} alt='ponto de interrogação' />
+                   </div>
                 </div>   
             </section>
 

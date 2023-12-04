@@ -1,8 +1,11 @@
 import Style from './css/CostureiroServico.module.css';
 import Button from '../imagens/cadastroButtons.svg';
 import fotoPerfil from '../imagens/fotoperfil.svg';
-import Slide from '../ComponentesIndex/SlidesServiços';
 import Header from '../ComponentesIndex/Header';
+import Carousel1 from './Componentes/Slides01';
+import Carousel2 from './Componentes/Slides02';
+import Carousel3 from './Componentes/Slides03';
+import Footer from '../ComponentesIndex/Footer';
 
 function AreaPedidos() {
     return(
@@ -23,7 +26,7 @@ function AreaPedidos() {
                             <img src={fotoPerfil} alt='Imagem perfil. Pessoa Branca' />
                             <p>@PIOULI</p>
                         </span>
-                        <Slide />
+                        <Carousel1 />
                     </div>
 
                     <div className={Style.carrousel}>
@@ -31,7 +34,7 @@ function AreaPedidos() {
                             <img src={fotoPerfil} alt='Imagem perfil. Pessoa Branca' />
                             <p>@PEDROCAS</p>
                         </span>
-                        <Slide />
+                        <Carousel2 />
                     </div>
 
                     <div className={Style.carrousel}>
@@ -39,7 +42,7 @@ function AreaPedidos() {
                             <img src={fotoPerfil} alt='Imagem perfil. Pessoa Branca' />
                             <p>@JAGUATIRICA</p>
                         </span>
-                        <Slide />
+                        <Carousel3 />
                     </div>
 
 
@@ -47,7 +50,9 @@ function AreaPedidos() {
 
             </section>
 
+            <Footer />
         </main>
+
     )
 }
 

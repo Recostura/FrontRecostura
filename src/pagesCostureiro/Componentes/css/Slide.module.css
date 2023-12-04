@@ -1,0 +1,12 @@
+.carouselitem{
+    width: 100%;
+    height: 560px;
+  }
+  .buttonCarrousel{
+    width: 300px;
+    height: 70px;
+    border-radius: 20px;
+    font-size: 35px;
+    background-color: #FFB6C6;
+  }
+    
