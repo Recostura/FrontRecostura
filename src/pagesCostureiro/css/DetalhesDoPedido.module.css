@@ -1,0 +1,156 @@
+.DetalhesPrincipal{
+    width: 100%;
+    height: auto;
+    background-color: #FFFAEB;
+}
+
+.DetalhesDoServico{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+    background-color: #FFB6C6;
+    width: 100%;
+    height: 250px;
+    
+  }
+
+.detalhes{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 120px;
+}
+  .txtDetalhes{
+    font-family: noto-sans, sans-serif;
+    font-size: 66px;
+    color: #413634;
+  }
+
+  .InfoPedido{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 520px;
+  }
+
+  .txtInfoCliente{
+    color: #413634;
+    font-family: noto-sans, sans-serif;
+    margin-top: 40px;
+  }
+
+  .infosCliente{
+    width: 80%;
+    height: 470px;
+  }
+
+  .formInfoCliente {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Alinha os elementos à esquerda */
+    padding: 20px;
+  }
+  
+  .formGroup {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    
+    
+  }
+  
+  .labelDetalheServico {
+    font-family: noto-sans, sans-serif;
+    font-size: 20px;
+    color: #413634;
+    margin-bottom: 5px;
+    margin-left: 20px;
+  }
+  
+  .input,
+  .textarea {
+    width: 1200px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    font-size: 16px;
+  }
+  
+  .textarea {
+    min-height: 150px;
+    resize: vertical; /* Permite a redimensionamento vertical */
+  }
+  .principalImagens{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 40px;
+    width: 100%;
+    
+  }
+
+  .imagemContainer {
+    
+    width: 280px;
+    height: 280px;
+    border-radius: 10px;
+    margin-right: 20px; /* Ajuste conforme necessário para espaçamento entre as imagens */
+  }
+  
+  .imagemPlaceholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    border: 2px dashed #ccc;
+    cursor: pointer;
+  }
+  
+  .adicionarImagemIcon {
+    font-size: 40px;
+    color: #ccc;
+  }
+
+  .linhahome{
+    margin-top: 70px;
+    width: 100%;
+}
+
+.fimDetalhes{
+    width: 100%;
+    height: 250px;
+    background-repeat: no-repeat;
+    background-image: url(/src/imagens/fimDetalhes.svg);
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.btCosturar{
+    width: 340px;
+    height: 60px;
+    background-color: #94BFA4;
+    border-radius: 20px;
+    font-size: 30px;
+    color: #413634;
+    font-family: noto-sans, sans-serif;
+    
+}
+.btCancelar{
+    width: 300px;
+    height: 50px;
+    font-size: 30px;
+    background-color: #fec0d000;
+    color: #FF543E;
+    border-bottom: 3px solid #FF543E;
+    font-family: noto-sans, sans-serif;
+    
+}

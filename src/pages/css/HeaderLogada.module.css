@@ -26,6 +26,10 @@
 
 .caixasheader1,.caixasheader2, .caixasheader3, .caixasheader4{
     transition: all 0.5 ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 120px;
 }
 
 .caixasheader1:hover,.caixasheader2:hover, .caixasheader3:hover, .caixasheader4:hover{
@@ -34,21 +38,21 @@
 
 
 .caixasheader2{
-    width: 100px;
+    
     height: 50px;
     background-color: #F4A77D;
     border-radius: 30px;
 
 }
 .caixasheader3{
-    width: 100px;
+    
     height: 50px;
     background-color: #F1DBFF;
     border-radius: 30px;
 
 }
 .caixasheader4{
-    width: 100px;
+    
     height: 50px;
     background-color: #90B49D;
     border-radius: 30px;
@@ -86,3 +90,64 @@
 .LinkLogin{
     text-decoration: none   ;
 }
+
+.caixasheader1 .caixasheader2 .caixasheader3{
+    text-align: center;
+}
+.menuContainer {
+    position: relative;
+  }
+  
+  .btPerfil {
+    font-family: 'Noto-sans', sans-serif;
+    font-size: 25px;
+    width: 70px;
+    height: 70px;
+    border-radius: 80px;
+    color: #413634;
+    background-color: #F4A77D;
+    border: 0 solid #FEC0CF;
+  }
+  
+  .menu {
+    position: absolute;
+    top: 80px; /* Ajuste conforme necessário */
+    right: 10px; /* Ajuste conforme necessário */
+    background-color: #FFF;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  
+  .menu a {
+    text-decoration: none;
+    color: #413634;
+    font-size: 18px;
+    margin-bottom: 10px;
+    transition: color 0.3s;
+  }
+  
+  .menu a:hover {
+    color: #F4A77D;
+  }
+
+  .btLogin {
+    width: 70px; /* Largura do botão */
+    height: 70px; /* Altura do botão */
+    border-radius: 50%; /* Para criar um botão circular */
+    background-color: #F4A77D; /* Cor de fundo do botão */
+    background-image:url(/src/imagens/perfilPioli.jpg); /* Substitua pelo caminho real da sua imagem */
+    background-size: 100%; /* Tamanho da imagem em relação ao botão */
+    background-repeat: no-repeat;
+    background-position: center;
+    border: none; /* Remover a borda padrão do botão */
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Efeito de transição de cor ao passar o mouse */
+  }
+  
+  .btLogin:hover {
+    background-color: #90B49D; /* Cor de fundo ao passar o mouse */
+  }

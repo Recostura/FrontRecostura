@@ -2,7 +2,6 @@
 import './App.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Index from './pages';
-import Login from './pages/login';
 import Cadastro from './pages/cadastro';
 import ClienteInicial from './pagesCliente/ClienteInicial';
 import ClientePedido from './pagesCliente/ClientePedido';
@@ -21,7 +20,6 @@ function App() {
         <Routes>
 
           <Route exact path='/' element={<Index />} />
-          <Route exact path='login' element={<Login />} />
           <Route exact path='Cadastro' element={<Cadastro />} />
           <Route exact path='ClienteInicial' element={<ClienteInicial />} />
           <Route exact path='CientePedido' element={<ClientePedido />} />
