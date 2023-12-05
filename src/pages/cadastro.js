@@ -1,10 +1,12 @@
 
 import Header from '../ComponentesIndex/Header';
-
-
-import Style from './css/cadastro.module.css'
+import Footer from '../ComponentesIndex/Footer'
 import Button from '../imagens/cadastroButtons.svg'
 import info from '../imagens/interrogração.svg'
+import FormularioDataNascimento from '../pagesCostureiro/Componentes/Date';
+import PasswordStrength from '../pagesCostureiro/Componentes/ForçaSenha';
+import Style from './css/cadastro.module.css'
+
 
 function Cadastro() {
     return(
@@ -21,7 +23,7 @@ function Cadastro() {
                 <form className={Style.nomeSenha}>
                     <input type="text" placeholder='E-mail:' /> <br/>
                     <input type="text" placeholder='Senha:'/> <br />
-                    <input type="text" placeholder='Senha:'/> <br/>
+                    <PasswordStrength />
                 </form>
             </section>
 
@@ -42,9 +44,10 @@ function Cadastro() {
                     </div>
                 </form>
             </section>
+            <FormularioDataNascimento />
 
             <section className={Style.forms3}>
-                <p>Localizaçao</p>
+                <p className={Style.text1}>Localizaçao</p>
                 <forms className={Style.localizacao}>
                     <div className={Style.cpe}>
                         <input type="text" placeholder='CPE:' className={Style.ceep}/> <br/>
@@ -60,6 +63,7 @@ function Cadastro() {
                         <input type="text" placeholder='País:' className={Style.pais}/> <br/>
                     </div>  
                 </forms> 
+
                 <div className={Style.bonus}>
                    <div className={Style.paragraph}>
                         <p>Saldo: R$30,00 (bonus)</p>
@@ -69,6 +73,23 @@ function Cadastro() {
                    </div>
                 </div>   
             </section>
+
+            <section className={Style.forms4}>
+                <forms className={Style.checkbox}>
+                <div className={Style.checkbox1}>
+                    <input type="checkbox"/>
+                    <label for="coding"> Eu aceito receber informações por e-mail sobre ofertas, serviços, produtos e eventos da Recostura ou de outras empresas<br/>parceiras.</label>
+                </div>
+                <div className={Style.checkbox1}>
+                    <input type="checkbox"/>
+                    <label for="coding"> Ao criar uma conta, você aceita e concorda com os <b>Termos Gerais e Condições de Uso</b> e que seus dados serão processados em<br/> conformidade com a da Recostura.</label>
+                </div>
+                </forms>
+
+                <button className={Style.conectar}>BORA COSTURAR!</button>
+            </section>
+
+        <Footer/>
 
         </main>
     )

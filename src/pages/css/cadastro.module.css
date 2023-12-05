@@ -7,7 +7,7 @@
 
 .buttonsAndFrase{
     width: 100%;
-    height: 600px;
+    height: 281px;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -25,6 +25,7 @@
     height: auto;
     display: flex;
     justify-content: center;
+    margin-top: 50px;
 }
 
 .nomeSenha{
@@ -54,7 +55,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 300px;
+    margin-top: 50px;
 }
 
 .forms2 p{
@@ -69,7 +70,6 @@
     height: auto;
     display: flex;
     flex-direction: column;
-    align-items: center;
     gap: 10px;
 }
 
@@ -110,10 +110,9 @@
     justify-content: center;
     flex-direction: column;
     margin-top: 50px;
-    background-color: red;
 }
 
-.forms3 p{
+.text1{
     font-size: 50px;
 }
 
@@ -124,7 +123,6 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
-    background-color: #ffb6c6;
     margin: 0 auto;
 
 }
@@ -201,9 +199,77 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
-.bonus p{
+.paragraph{
+    width: 70%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    font-size: 30px;
+}
+
+.paragraph p{
+    margin: 0;
+}
+
+.buttonInfo{
+    width: 20%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.buttonInfo img{
+    width: 17px;
+}
+
+.forms4{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.forms4 input{
+    width: 27px;
+    height: 27px;
+}
+
+.forms4 label{
+    margin-top: 25px;
     font-size: 20px;
+}
+
+.checkbox{
+    width: 90%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    gap: 40px;
+}
+
+.checkbox1{
+    width: 90%;
+    height: 120px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+}
+
+.conectar{
+    width: 60%;
+    height: 130px;
+    margin: 70px 0;
+    border-radius: 40px;
+    font-size: 40px;
+    background-color: #E7C2FF;
 }
