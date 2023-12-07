@@ -23,43 +23,51 @@
     color: #413634;
 }
 
-.wrapper {
-    position:relative;
+  .conteudoPedidos{
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carrousels{
+    width: 50%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    gap: 50px;
+    padding: 50px 0 90px 0;
+}
+
+.carrousel{
+    width: 80%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.perfil{
+    width: 45%;
+    height: 100px;
     display: flex;
     flex-direction: row;
-    justify-content:left ;
-    width: 30%;
-    height: 3.5vw;
-    border: 2px solid #000;
-  }
-  
-  .icon {
-    height: 1.5rem;
-    width: 1.5rem;
-    background-color: red;
-    padding: 4px;
-    position: absolute;
-    box-sizing:border-box;
-    top:50%;
-    right:53%;
-    transform: translateY(-50%);
-  }
+    align-items: center;
+    gap: 20px;
+    font-size: 30px;
+}
 
-  .icon2 {
-    height: 100%;
-    width: 2rem;
-    background-image: url(../images/FaceUser.svg);
-    background-position: center;
-    padding: 4px;
-    position: absolute;
-    box-sizing:border-box;
-    top:50%;
-    left:0;
-    transform: translateY(-50%);
-  }
-  
-  .input {
-    height: 50px;
-    box-sizing:border-box;
-    padding-left: 1.5rem;
-  }
+.perfil p{
+    margin-top: 5px;
+}
+
+.perfil img{
+    width: 80px;
+}
+
+.imgPlano{
+    width: 25px;
+    height: 25px;
+}
