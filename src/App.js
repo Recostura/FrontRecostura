@@ -12,6 +12,7 @@ import CostureiroServicos from './pagesCostureiro/CostureiroServicos';
 import DetalhesDoPedido from './pagesCostureiro/DetalhesDoPedido';
 import StatusServico from './pagesCostureiro/StatusServico';
 import CodigoSeguranca from './pagesCostureiro/CodigoSeguranca';
+import LocalizandoCostureiro from './pagesCliente/LocalizandoCostureiro';
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
           <Route exact path='DetalhesDoPedido' element={<DetalhesDoPedido />} />
           <Route exact path='StatusServico' element={<StatusServico />} />
           <Route exact path='CodigoSeguranca' element={<CodigoSeguranca />} />
+          <Route exact path='LocalizandoCostureiro'element={<LocalizandoCostureiro />} />
 
 
         </Routes>
