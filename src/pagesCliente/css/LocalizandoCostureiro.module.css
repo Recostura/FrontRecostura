@@ -63,3 +63,44 @@
     cursor: pointer;
     font-size: 16px;
   }
+  .mapaPrincipal{
+    width: 100%;
+    height: auto;
+  }
+
+
+  /* Estilos do input */
+.inputCEP {
+  width: 220px;
+  height: 50px;
+  border-radius: 20px;
+  margin-top: 20px;
+  margin-left: calc((100% - 200px) / 2); /* Centraliza horizontalmente */
+  display: block;
+}
+
+/* Estilos do botão */
+.encontreButton {
+  width: 220px;
+  height: 40px;
+  border-radius: 20px;
+  background-color: #28a745; /* Cor verde */
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 20px;
+  margin-left: calc((100% - 200px) / 2); /* Centraliza horizontalmente */
+  display: block;
+}
+
+/* Estilos do container do mapa */
+.caixaMapa {
+  width: 85%;
+  height: 420px;
+  margin-top: 40px;
+  margin-left: calc((100% - 85%) / 2); /* Centraliza horizontalmente */
+  position: relative;
+}
+
+

@@ -40,9 +40,9 @@ function Header (){
             <img src={logoHome} className={Style.logoHome} />
             <div className={Style.nomeHome}>Recostura</div>
 
-                        <NavLink to='#'> 
+                        
                         <span className={Style.caixasheader2}>Sobre Nós</span>
-                        </NavLink>
+                        
 
                     
             <span className={Style.caixasheader3}>Parceiros</span>
