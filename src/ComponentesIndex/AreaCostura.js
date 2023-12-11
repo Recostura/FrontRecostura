@@ -12,7 +12,7 @@ function AreaCostura() {
                     <button> <Link to='Cadastro' className={Style.linkao}>SOU COSTUREIRO </Link> </button>
                 </div>
                 <div className={Style.ConteinerMenor2}>
-                    <button> <Link to='Cadastro' className={Style.linkao}>BUSCAR COSTUREIRO  </Link></button> 
+                    <button> <Link to='CadastroCli' className={Style.linkao}>BUSCAR COSTUREIRO  </Link></button> 
                 </div>
             </div>
             <img src={linhas} className={Style.linhahome}/>

@@ -1,0 +1,291 @@
+
+.pageCdastro{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.buttonsAndFrase{
+    width: 100%;
+    height: 281px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #ffb6c6;
+}
+
+.buttonsAndFrase p{
+    font-size: 60px;
+    color: #413634;
+}
+
+.forms1{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
+}
+
+.nomeSenha{
+    width: 80%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.forms1_input{
+    width: 100%;
+    height: 64px;
+    border-radius: 30px;
+    border: 0;
+    font-size: 20px;
+    padding-left: 30px;
+}
+
+.forms2{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.Ifpessoal_text{
+    width: 100%;
+    height: auto;
+    align-items: center;
+    font-size: 60px;
+}
+
+.infoPessoal{
+    width: 80%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.forms2_input{
+    width: 100%;
+    height: 64px;
+    border-radius: 30px;
+    border: 0;
+    font-size: 20px;
+    padding-left: 30px;
+}
+
+.divNumero{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.ddd{
+    width: 10%;
+    height: 64px;
+    background-color: #D9D9D9;
+    border-radius: 30px 0 0 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+}
+
+.divNumero input{
+    width: 90%;
+    height: 64px;
+    border-radius:0 30px 30px 0;
+} 
+
+.forms3{
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 50px;
+}
+
+.text1{
+    font-size: 50px;
+}
+
+.localizacao{
+    width: 80%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    justify-content: center;
+    gap: 10px;
+}
+
+.CPE{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    align-items:center;
+    justify-content: space-evenly;
+}
+
+.ceep{
+    width: 40%;
+    height: 64px;
+    border-radius: 30px;
+    padding-left: 30px;
+}
+
+.endereço{
+    width: 57%;
+    height: 64px;
+    border-radius: 30px;
+    padding-left: 30px;
+}
+
+.nBairro{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    align-items:center;
+    justify-content: space-evenly;
+}
+
+.Nº{
+    width: 30%;
+    height: 64px;
+    border-radius: 30px;  
+    padding-left: 30px;
+}
+
+.bairro{
+    width: 65%;
+    height: 64px;
+    border-radius: 30px;
+    padding-left: 30px;
+}
+
+.estadoP{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    align-items:center;
+    justify-content: space-evenly;
+}
+
+.estado{
+    width: 57%;
+    height: 64px;
+    border-radius: 30px;
+    padding-left: 30px;
+}
+
+.areaPaís{
+    width: 40%;
+    height: auto;
+}
+
+.país{
+    width: 100%;
+    height: 64px;
+    border-radius: 30px;
+    padding-left: 30px;
+    font-size: 30px;
+    background-color: #fff;
+    color: #00000070;
+}
+
+.bonus{
+    width: 60%;
+    height: 64px;
+    background-color: #fff;
+    border-radius: 30px;
+    margin: 50px auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.paragraph{
+    width: 70%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    font-size: 30px;
+}
+
+.paragraph p{
+    margin: 0;
+}
+
+.buttonInfo{
+    width: 20%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.buttonInfo img{
+    width: 17px;
+}
+
+.forms4{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.forms4 input{
+    width: 27px;
+    height: 27px;
+}
+
+.forms4 label{
+    margin-top: 25px;
+    font-size: 20px;
+}
+
+.checkbox{
+    width: 90%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    gap: 40px;
+}
+
+.checkbox1{
+    width: 90%;
+    height: 120px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+}
+
+.conectar{
+    width: 50%;
+    height: 120px;
+    margin: 70px 0;
+    border-radius: 40px;
+    font-size: 40px;
+    background-color: #E7C2FF;
+}

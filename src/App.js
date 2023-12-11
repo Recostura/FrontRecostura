@@ -12,6 +12,7 @@ import CostureiroServicos from './pagesCostureiro/CostureiroServicos';
 import DetalhesDoPedido from './pagesCostureiro/DetalhesDoPedido';
 import StatusServico from './pagesCostureiro/StatusServico';
 import CodigoSeguranca from './pagesCostureiro/CodigoSeguranca';
+import CadastroCli from './pagesCliente/CadastroCli';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
 
           <Route exact path='/' element={<Index />} />
           <Route exact path='Cadastro' element={<Cadastro />} />
+          <Route exact path='CadastroCli' element={<CadastroCli />} />
           <Route exact path='ClienteInicial' element={<ClienteInicial />} />
           <Route exact path='CientePedido' element={<ClientePedido />} />
           <Route exact path='EncontreCostureiro' element={<EncontreCostureiro />} />
