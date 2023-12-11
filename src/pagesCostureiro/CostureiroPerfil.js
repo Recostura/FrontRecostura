@@ -1,5 +1,3 @@
-// CostureiroPerfil.js
-
 import React, { useState, useRef } from 'react';
 import { Modal, Button, Carousel } from 'react-bootstrap';
 import HeaderLogada from '../pages/HeaderLogada';
@@ -12,7 +10,7 @@ import fotoperfil1 from '../imagens/imgperfilpedro.png';
 import fotoperfil2 from '../imagens/imgperfiljagua.png';
 import imgplanos from '../imagens/modalplanos.png';
 import imgcaixaperfil from '../imagens/fundoimgperfil.png'
-import adicionar from '../imagens/addperfil.svg';
+import adicionar from '../imagens/addperfil.png';
 
 const TypeServiceModal = ({ show, handleClose, handleServiceSelection }) => {
   return (
@@ -69,9 +67,15 @@ const CostureiroPerfil = () => {
     avaliacao2: '',
   });
 
+  const [imagemSelecionada, setImagemSelecionada] = useState(null);
+
   const handleImageChange = (e) => {
     const file = e.target.files[0];
-    // Lógica para lidar com a imagem selecionada (pode ser adicionada aqui)
+
+    if (file) {
+      const urlImagem = URL.createObjectURL(file);
+      setImagemSelecionada(urlImagem);
+    }
   };
 
   const [showServiceModal, setShowServiceModal] = useState(false);
@@ -113,16 +117,28 @@ const CostureiroPerfil = () => {
 
       <form className={Style.forms} onSubmit={handleSubmit}>
         <div className={Style.profileContainer}>
-          <div className={Style.imageContainer}>
-            <img src={imgcaixaperfil}/>
-            <img className={Style.addpf} src={adicionar}/>
-            <input
-              type="file"
-              accept="image/*"
-              onChange={handleImageChange}
-            />
+        <div className={Style.imageContainer}>
+            {imagemSelecionada ? (
+              <img
+                src={imagemSelecionada}
+                alt="Imagem do Perfil"
+                className={Style.imagemPerfil}
+                style={{ width: '300px', height: '400px' }}
+              />
+            ) : (
+              <>
+                <label className={Style.customFileInput}>
+                  <input
+                    type="file"
+                    accept=".png, .jpg, .jpeg, .gif"
+                    onChange={handleImageChange}
+                  />
+                  <img className={Style.addpf} src={adicionar} alt="Escolher Imagem" />
+                </label>
+              </>
+            )}
           </div>
-          
+
           <div className={Style.column1}>
             <h1 style={{ color: '#9F988F' }}>Seu Perfil</h1>
             <input
@@ -163,10 +179,9 @@ const CostureiroPerfil = () => {
             <div className={Style.tiposervicoText}>
               Tipo de Serviço: {formData.tiposervico}
               <Button variant="primary" onClick={handleShowServiceModal}>
-              Selecionar
-            </Button>
+                Selecionar
+              </Button>
             </div>
-            
           </div>
 
           <input

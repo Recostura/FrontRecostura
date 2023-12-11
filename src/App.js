@@ -12,6 +12,8 @@ import CostureiroServicos from './pagesCostureiro/CostureiroServicos';
 import DetalhesDoPedido from './pagesCostureiro/DetalhesDoPedido';
 import StatusServico from './pagesCostureiro/StatusServico';
 import CodigoSeguranca from './pagesCostureiro/CodigoSeguranca';
+import AvaliacaoCostureira from './pagesCliente/AvaliacaoCostureira';
+import UsuarioDetalhes from './pagesCliente/UsuarioDetalhes';
 
 function App() {
   return (
@@ -26,10 +28,12 @@ function App() {
           <Route exact path='EncontreCostureiro' element={<EncontreCostureiro />} />
           <Route exact path='Acompanhamento' element={<Acompanhamento />} />
           <Route exact path='CostureiroPerfil' element={<CostureiroPerfil />} />
+          <Route exact path='AvaliacaoCostureira' element={<AvaliacaoCostureira />} />
           <Route exact path='CostureiroServicos' element={<CostureiroServicos />} />
           <Route exact path='DetalhesDoPedido' element={<DetalhesDoPedido />} />
           <Route exact path='StatusServico' element={<StatusServico />} />
           <Route exact path='CodigoSeguranca' element={<CodigoSeguranca />} />
+          <Route exact path='UsuarioDetalhes' element={<UsuarioDetalhes />} />
 
 
         </Routes>

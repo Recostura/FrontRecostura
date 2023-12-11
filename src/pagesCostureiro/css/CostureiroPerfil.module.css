@@ -225,35 +225,6 @@
   position: relative; /* Adiciona posição relativa para posicionar o input dentro deste contêiner */
 }
 
-.imageContainer input {
-  width: 100%; /* Preenche 100% da largura do contêiner */
-  height: 100%; /* Preenche 100% da altura do contêiner */
-  position: absolute;
-  opacity: 0; /* Torna o input invisível */
-  top: 0;
-  left: 0;
-}
-
-.imageLabel {
-  cursor: pointer;
-  color: white;
-  padding: 10px;
-  border-radius: 5px;
-  text-align: center;
-  background-image: url('../../imagens/addperfil.svg'); /* Substitua pelo caminho da sua imagem */
-  background-size: cover; /* Garante que a imagem cubra todo o espaço do contêiner */
-  height: 100%; /* Define a altura do contêiner */
-  display: flex;
-  align-items: center;
-}
-
-.addpf{
-  position: absolute;
-  width: 220px;
-  top: 25%;
-  left: 185%;
-}
-
 input::placeholder{
   position: relative;
   left: 0;
