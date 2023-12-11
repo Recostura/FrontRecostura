@@ -1,0 +1,126 @@
+.forms1{
+    margin-top: -500px;
+    width: 900px;
+    margin-left: 600px;
+}
+
+.email, .senhaum {
+    border-radius: 20px;
+    width: 600px;
+    height: 30px;
+    margin-bottom: 10px;
+    text-align: left;
+    padding: 20px;
+}
+
+.confirme{
+    font-size: 20px;
+    margin-right: 400px;
+}
+
+.senhadois{
+    margin-top: 20px;
+    border-radius: 20px;
+    width: 600px;
+    height: 30px;
+    margin-bottom: 10px;
+    text-align: left;
+    padding: 20px;
+}
+
+.email::placeholder, .senhaum::placeholder, .senhadois::placeholder {
+    text-align: left;
+}
+
+.email:focus, .senhaum:focus, .senhadois:focus {
+    text-align: left;
+}
+
+/* Adicione essa regra para ajustar o texto do placeholder para a direita quando o texto é digitado */
+.email:focus, .senhaum:focus, .senhadois:focus {
+    text-align: left;
+}
+
+
+
+
+.passwordCriteria {
+    display: flex;
+    flex-direction: column; 
+    margin-left: 180px;
+  }
+  
+  
+.passwordCriterion {
+    display: flex;
+    align-items: center; 
+  }
+  
+  
+  .passwordCriterion input[type="checkbox"] {
+    border-radius: 5px; 
+    margin-right: 5px; 
+  }
+  
+  
+  .passwordCriterion label {
+    font-size: 14px; 
+  }
+  
+  
+  .passwordCriterion input[type="checkbox"]:checked {
+    background-color: rgb(144, 164, 238); /* Define a cor de fundo quando marcado */
+    border: 1px solid #564caf; /* Define a cor da borda quando marcado */
+  }
+
+
+  /* Estilo para a div que contém a barra de progresso */
+.passwordStrengthBar {
+    width: 200px; /* Ajusta a largura conforme necessário */
+    margin-left: 180px;
+    margin-top: 10px;
+  }
+  
+  /* Estilo para a barra de progresso */
+  .passwordStrengthIndicator {
+    width: 100%;
+    height: 20px; /* Ajusta a altura conforme necessário */
+    border-radius: 10px; /* Borda arredondada */
+    appearance: none; /* Remove o estilo padrão do elemento */
+    background-color: #e0e0e0; /* Cor de fundo da barra de progresso */
+  }
+  
+  /* Estilo para a barra de progresso quando há progresso */
+  .passwordStrengthIndicator[value] {
+    background-image: linear-gradient(
+      to right,
+      #4caf50,
+      #4caf50 var(--progress),
+      #e0e0e0 var(--progress),
+      #e0e0e0
+    );
+  }
+  
+  /* Estilo para a pseudo-classe "before" para criar a borda arredondada quando há progresso */
+  .passwordStrengthIndicator[value]::-webkit-progress-value::before {
+    content: "";
+    display: block;
+    width: 10px; /* Largura da borda arredondada */
+    height: 100%;
+    border-radius: 5px; /* Borda arredondada */
+  }
+  
+  /* Estilo para a pseudo-classe "after" para criar a borda arredondada no final */
+  .passwordStrengthIndicator[value]::-webkit-progress-value::after {
+    content: "";
+    display: block;
+    width: 10px; /* Largura da borda arredondada */
+    height: 100%;
+    border-radius: 5px; /* Borda arredondada */
+    background-color: #e0e0e0; /* Cor de fundo da barra de progresso */
+  }
+  
+  .erro li{
+    font-size: 15px;
+  }
+  

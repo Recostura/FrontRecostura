@@ -26,6 +26,10 @@
 
 .caixasheader1,.caixasheader2, .caixasheader3, .caixasheader4{
     transition: all 0.5 ease;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    cursor: pointer;
 }
 
 .caixasheader1:hover,.caixasheader2:hover, .caixasheader3:hover, .caixasheader4:hover{
@@ -34,21 +38,22 @@
 
 
 .caixasheader2{
-    width: 100px;
+    width: 120px;
     height: 50px;
     background-color: #F4A77D;
     border-radius: 30px;
+    cursor: pointer;
 
 }
 .caixasheader3{
-    width: 100px;
+    width: 120px;
     height: 50px;
     background-color: #F1DBFF;
     border-radius: 30px;
 
 }
 .caixasheader4{
-    width: 100px;
+    width: 120px;
     height: 50px;
     background-color: #90B49D;
     border-radius: 30px;

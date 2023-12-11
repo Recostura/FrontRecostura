@@ -14,6 +14,9 @@ import StatusServico from './pagesCostureiro/StatusServico';
 import CodigoSeguranca from './pagesCostureiro/CodigoSeguranca';
 import AvaliacaoCostureira from './pagesCliente/AvaliacaoCostureira';
 import UsuarioDetalhes from './pagesCliente/UsuarioDetalhes';
+import CadastroCli from './pagesCliente/CadastroCli';
+import LocalizandoCostureiro from './pagesCliente/LocalizandoCostureiro';
+
 
 function App() {
   return (
@@ -23,6 +26,7 @@ function App() {
 
           <Route exact path='/' element={<Index />} />
           <Route exact path='Cadastro' element={<Cadastro />} />
+          <Route exact path='CadastroCli' element={<CadastroCli />} />
           <Route exact path='ClienteInicial' element={<ClienteInicial />} />
           <Route exact path='CientePedido' element={<ClientePedido />} />
           <Route exact path='EncontreCostureiro' element={<EncontreCostureiro />} />
@@ -34,6 +38,7 @@ function App() {
           <Route exact path='StatusServico' element={<StatusServico />} />
           <Route exact path='CodigoSeguranca' element={<CodigoSeguranca />} />
           <Route exact path='UsuarioDetalhes' element={<UsuarioDetalhes />} />
+          <Route exact path='LocalizandoCostureiro'element={<LocalizandoCostureiro />} />
 
 
         </Routes>

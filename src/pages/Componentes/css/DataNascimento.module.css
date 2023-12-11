@@ -1,0 +1,32 @@
+.formsDate{
+    width: 50%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 0px;
+    margin-left: 130px;
+}
+
+.label1{
+    width: 25%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.label1 label{
+    font-size: 20px;
+}
+
+.areaData{
+    width: 100%;
+    height: 100px;
+    padding-left: 45px;
+    border-radius: 5px;
+    font-size: 30px;
+    color: #00000070;
+    background-color: #fff;
+}
