@@ -2,6 +2,7 @@ import HeaderLogada from "../pages/HeaderLogada.js";
 import Style from '../pagesCostureiro/css/CodigoSeguranca.module.css';
 import cadeado from '../imagens/iconCadeado.svg';
 import botao from '../imagens/cadastroButtons.svg';
+import { NavLink } from 'react-router-dom';
 
 function CodigoSeguranca(){
     return(
@@ -23,8 +24,9 @@ function CodigoSeguranca(){
                     <img className={`${Style.btCodigo} ${Style.btRight}`} src={botao} alt="Botão" />
                 </div>
 
+                <NavLink to='/StatusServico' >    
                  <button className={Style.btConfirmar} type="submit">CONFIRMAR</button>
-
+                 </NavLink>
 
             </div>
 

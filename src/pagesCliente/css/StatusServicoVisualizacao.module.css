@@ -1,0 +1,73 @@
+.StatusPrincipal {
+    width: 100%;
+    height: auto;
+    background-color: #FFFAEB;
+  }
+  
+  .Atualizacao {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 520px;
+  }
+  
+  .atualizacaoItem {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .fraseContainer {
+    display: flex;
+    align-items: center;
+  }
+  
+  .txtInfoCliente {
+    font-family: noto-sans, sans-serif;
+    font-size: 36px;
+    color: #413634;
+  }
+  
+  .btContainer {
+    position: relative;
+    width: 250px;
+    height: 65px;
+    margin-left: 10px; /* Espaçamento entre a frase e o botão */
+    flex-direction: column;
+  }
+  
+  .btParteVisivel {
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    opacity: 0.9;
+    position: absolute;
+    z-index: 1; /* Adicionado z-index */
+  }
+  
+  .btMetade {
+    width: 50%;
+    height: 100%;
+    background-color: #FF543E;
+    transition: transform 0.3s;
+    position: absolute;
+  }
+  
+  .btMetade:nth-child(2) {
+    transform: translateX(100%);
+    background-color: green;
+    z-index: 2; /* Adicionado z-index maior */
+  }
+  
+  .PrincipalMensagem {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+  }
+  
+  .flexContainer {
+    display: flex;
+    align-items: center;
+  }

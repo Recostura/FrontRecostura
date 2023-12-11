@@ -48,4 +48,4 @@ function HeaderLogada() {
   );
 }
 
-export default HeaderLogada; <button className={`${Style.btLogin} ${Style.btPerfil}`}></button>
+export default HeaderLogada; 

@@ -32,6 +32,7 @@ function App() {
           <Route exact path='DetalhesDoPedido' element={<DetalhesDoPedido />} />
           <Route exact path='StatusServico' element={<StatusServico />} />
           <Route exact path='CodigoSeguranca' element={<CodigoSeguranca />} />
+          <Route exact path='LocalizandoCostureiro'element={<LocalizandoCostureiro />} />
 
 
         </Routes>

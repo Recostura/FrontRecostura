@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import Style from '../css/Header.module.css';
 import logoHome from '../imagens/logoHome.svg';
 import user from '../imagens/user.png'
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import Modal from '../pages/Modal'
 
 function Header (){
@@ -40,9 +40,15 @@ function Header (){
             <img src={logoHome} className={Style.logoHome} />
             <div className={Style.nomeHome}>Recostura</div>
 
-            <span className={Style.caixasheader2}></span>
-            <span className={Style.caixasheader3}></span>
-            <span className={Style.caixasheader4}></span>
+                        
+                        <span className={Style.caixasheader2}>Sobre Nós</span>
+                        
+
+                    
+            <span className={Style.caixasheader3}>Parceiros</span>
+
+            <span className={Style.caixasheader4}>Fale conosco</span>
+
             <button onClick={openModal} className={Style.btLogin}>ACESSE SUA CONTA</button>
             <Modal isOpen={modalIsOpen} onRequestClose={closeModal} />
         </header>
