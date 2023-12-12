@@ -16,6 +16,7 @@ import AvaliacaoCostureira from './pagesCliente/AvaliacaoCostureira';
 import UsuarioDetalhes from './pagesCliente/UsuarioDetalhes';
 import CadastroCli from './pagesCliente/CadastroCli';
 import LocalizandoCostureiro from './pagesCliente/LocalizandoCostureiro';
+import SobreNos from './pagesCliente/SobreNos';
 
 
 function App() {
@@ -39,6 +40,7 @@ function App() {
           <Route exact path='CodigoSeguranca' element={<CodigoSeguranca />} />
           <Route exact path='UsuarioDetalhes' element={<UsuarioDetalhes />} />
           <Route exact path='LocalizandoCostureiro'element={<LocalizandoCostureiro />} />
+          <Route exact path='SobreNos'element={<SobreNos />} />
 
 
         </Routes>
