@@ -1,6 +1,6 @@
 .forms2{
     width: 90%;
-    margin-left: 80px;
+    margin-left: 0px;
 }
 
 .tit{
@@ -9,9 +9,9 @@
 
 .nome, .nome2, .cpf{
     border-radius: 20px;
-    width: 89%;
+    width: 1200px;
     height: 30px;
-    margin-bottom: 10px;
+    margin-bottom: -20px;
     text-align: left;
     padding: 20px;
 }
@@ -22,18 +22,18 @@
     height: 41px;
     font-size: 27px;
     border-radius: 20px 0 0 20px;
-    margin-left: 80px;
+    margin-left: 4px;
     margin-top: 0px;
 }
 
 .numero{
     border-radius: 0px 20px 20px 0px;
-    width: 84%;
+    width: 1130px;
     height: 30px;
     margin-bottom: 10px;
     text-align: left;
     padding: 20px;
-    margin-top: -57px;
+    margin-top: -56px;
     display: flex;
-    margin-left: 140px;
+    margin-left: 65px;
 }
