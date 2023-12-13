@@ -10,7 +10,7 @@
 .nome, .nome2, .cpf{
     border-radius: 20px;
     width: 89%;
-    height: 30px;
+    height: 64px;
     margin-bottom: 10px;
     text-align: left;
     padding: 20px;
@@ -19,17 +19,17 @@
 .br{
     background-color: #e4e4e4;
     width: 60px;
-    height: 41px;
+    height: 64px;
     font-size: 27px;
     border-radius: 20px 0 0 20px;
     margin-left: 80px;
-    margin-top: 0px;
+    margin-top: 60px;
 }
 
 .numero{
     border-radius: 0px 20px 20px 0px;
     width: 84%;
-    height: 30px;
+    height: 64px;
     margin-bottom: 10px;
     text-align: left;
     padding: 20px;

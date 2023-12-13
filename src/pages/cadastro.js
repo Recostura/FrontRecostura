@@ -19,7 +19,13 @@ function Cadastro() {
                 <img src={Button} alt='botões' />
             </div>
 
-           <Email
+            <section className={Style.forms1}>
+                <form className={Style.nomeSenha}>
+                    <input type="text" placeholder='E-mail:' className={Style.forms1_input} /> <br/>
+                    <input type="password" placeholder='Senha:' className={Style.forms1_input} /> <br />
+                    <PasswordStrength />
+                </form>
+            </section>
 
             <section className={Style.forms2}>
                 <p className={Style.Ifpessoal_text}>Informações Pessoais</p>
