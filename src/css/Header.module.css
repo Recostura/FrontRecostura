@@ -10,6 +10,7 @@
     background-color: #FFF4F3;
     position: fixed;
     z-index: 10;
+    margin-top: 0px;
 }
 
 .logoHome{
@@ -30,6 +31,9 @@
     align-items: center;
     display: flex;
     cursor: pointer;
+    outline: none;
+    color: #000;
+    text-decoration: none;
 }
 
 .caixasheader1:hover,.caixasheader2:hover, .caixasheader3:hover, .caixasheader4:hover{

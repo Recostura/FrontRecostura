@@ -10,7 +10,7 @@
 
 .ceep{
     width: 310px;
-    height: 64px;
+    height: 41px;
     display: flex;
     font-size: 20px;
     margin-left: 80px;
@@ -21,7 +21,7 @@
 
 .rua{
     width: 900px;
-    height: 64px;
+    height: 41px;
     display: flex;
     font-size: 27px;
     border-radius:20px;
@@ -32,7 +32,7 @@
 
 .N{
     width: 210px;
-    height: 64px;
+    height: 41px;
     display: flex;
     font-size: 20px;
     margin-left: 80px;
@@ -43,7 +43,7 @@
 
 .bairro{
     width: 1000px;
-    height: 64px;
+    height: 41px;
     display: flex;
     font-size: 27px;
     border-radius:20px;
@@ -54,7 +54,7 @@
 
 .estado{
     width: 710px;
-    height: 64px;
+    height: 41px;
     display: flex;
     font-size: 20px;
     margin-left: 80px;
@@ -65,7 +65,7 @@
 
 .pais{
     width: 500px;
-    height: 64px;
+    height: 41px;
     display: flex;
     font-size: 27px;
     border-radius:20px;
