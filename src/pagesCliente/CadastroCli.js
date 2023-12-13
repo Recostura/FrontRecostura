@@ -8,7 +8,7 @@ import Senha from './Componentes/Senha';
 import Inf from './Componentes/Inf';
 import Local from './Componentes/Local';
 import Foto from './Componentes/Foto';
-
+import { Link } from 'react-router-dom';
 
 function CadastroCli() {
     return(

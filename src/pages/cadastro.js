@@ -8,6 +8,8 @@ import FormularioDataNascimento from './Componentes/DataNascimento';
 import SenhaEmail from './Componentes/SenhaEmail';
 import InfoPessoalForm from './Componentes/pessoainfo';
 import Cep from './Componentes/cep';
+import { Link } from "react-router-dom";
+
 
 function Cadastro() {
     return(

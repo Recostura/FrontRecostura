@@ -17,7 +17,7 @@ const Carousel5 = () => {
           alt="Primeiro Slide"
         />
         <Carousel.Caption>
-          <Link to='/Acompanhamento'>
+          <Link to='/AtualizacaoPedido'>
             <button className={Style.buttonCarrousel}>CONTRATE</button>
           </Link>
         </Carousel.Caption>
@@ -30,7 +30,7 @@ const Carousel5 = () => {
           alt="Segundo Slide"
         />
         <Carousel.Caption>
-          <Link to='/Acompanhamento'>
+          <Link to='/AtualizacaoPedido'>
             <button className={Style.buttonCarrousel}>CONTRATE</button>
           </Link>
         </Carousel.Caption>
@@ -43,7 +43,7 @@ const Carousel5 = () => {
           alt="Terceiro Slide"
         />
         <Carousel.Caption>
-          <Link to='/Acompanhamento'>
+          <Link to='/AtualizacaoPedido'>
             <button className={Style.buttonCarrousel}>CONTRATE</button>
           </Link>
         </Carousel.Caption>
