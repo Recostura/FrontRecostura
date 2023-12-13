@@ -9,15 +9,9 @@
 
 .nome, .nome2, .cpf{
     border-radius: 20px;
-<<<<<<< HEAD
     width: 89%;
     height: 64px;
     margin-bottom: 10px;
-=======
-    width: 1200px;
-    height: 30px;
-    margin-bottom: -20px;
->>>>>>> a827d487f133cf07a7b3c6ee7c6dc77d6530123d
     text-align: left;
     padding: 20px;
 }
@@ -28,24 +22,14 @@
     height: 64px;
     font-size: 27px;
     border-radius: 20px 0 0 20px;
-<<<<<<< HEAD
     margin-left: 80px;
     margin-top: 60px;
-=======
-    margin-left: 4px;
-    margin-top: 0px;
->>>>>>> a827d487f133cf07a7b3c6ee7c6dc77d6530123d
 }
 
 .numero{
     border-radius: 0px 20px 20px 0px;
-<<<<<<< HEAD
     width: 84%;
     height: 64px;
-=======
-    width: 1130px;
-    height: 30px;
->>>>>>> a827d487f133cf07a7b3c6ee7c6dc77d6530123d
     margin-bottom: 10px;
     text-align: left;
     padding: 20px;

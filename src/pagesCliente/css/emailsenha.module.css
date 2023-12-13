@@ -7,13 +7,8 @@
 .email, .senhaum {
     border-radius: 20px;
     width: 600px;
-<<<<<<< HEAD
     height: 64px;
     margin-bottom: 10px;
-=======
-    height: 30px;
-    margin-bottom: -20px;
->>>>>>> a827d487f133cf07a7b3c6ee7c6dc77d6530123d
     text-align: left;
     padding: 20px;
 }
@@ -27,13 +22,8 @@
     margin-top: -20px;
     border-radius: 20px;
     width: 600px;
-<<<<<<< HEAD
     height: 64px;
     margin-bottom: 10px;
-=======
-    height: 30px;
-    margin-bottom: -50px;
->>>>>>> a827d487f133cf07a7b3c6ee7c6dc77d6530123d
     text-align: left;
     padding: 20px;
 }
