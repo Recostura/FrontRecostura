@@ -59,8 +59,9 @@ function Cadastro() {
                     <label for="coding"> Ao criar uma conta, você aceita e concorda com os <b>Termos Gerais e Condições de Uso</b> e que seus dados serão processados em<br/> conformidade com a da Recostura.</label>
                 </div>
                 </forms>
-
-                <button className={Style.conectar}>BORA COSTURAR!</button>
+                <Link to='/CostureiroPerfil'> 
+                   <button className={Style.conectar}>BORA COSTURAR!</button>
+                </Link>
             </section>
 
         <Footer/>

@@ -1,4 +1,3 @@
-// StatusServicoVisualizacao.js
 import React from 'react';
 import Style from '../css/StatusServicoVisualizacao.module.css';
 

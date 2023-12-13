@@ -5,7 +5,7 @@ import Index from './pages';
 import Cadastro from './pages/cadastro';
 import ClienteInicial from './pagesCliente/ClienteInicial';
 import ClientePedido from './pagesCliente/ClientePedido';
-import Acompanhamento from './pagesCliente/Acompanhamento';
+import Acompanhamento from './pagesCliente/AtualizacaoPedido';
 import EncontreCostureiro from './pagesCliente/EncontreCostureiro';
 import CostureiroPerfil from './pagesCostureiro/CostureiroPerfil';
 import CostureiroServicos from './pagesCostureiro/CostureiroServicos';
@@ -17,6 +17,7 @@ import UsuarioDetalhes from './pagesCliente/UsuarioDetalhes';
 import CadastroCli from './pagesCliente/CadastroCli';
 import LocalizandoCostureiro from './pagesCliente/LocalizandoCostureiro';
 import Parceiros from './Parceiros';
+import StatusServicoVisualizacao from './pagesCliente/Componentes/StatusServicoVisualizacao';
 
 
 function App() {
@@ -41,6 +42,8 @@ function App() {
           <Route exact path='UsuarioDetalhes' element={<UsuarioDetalhes />} />
           <Route exact path='LocalizandoCostureiro'element={<LocalizandoCostureiro />} />
           <Route exact path='Parceiros' element={<Parceiros />} />
+          <Route exact path='AvaliacaoCostureira' element={<AvaliacaoCostureira />} />
+          
 
 
         </Routes>

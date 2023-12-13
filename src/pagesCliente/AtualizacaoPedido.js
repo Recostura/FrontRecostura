@@ -2,11 +2,11 @@ import HeaderLogada from '../pages/HeaderLogada';
 import Style from '../pagesCliente/css/Acompanhamento.module.css';
 import botao from '../imagens/cadastroButtons.svg';
 import linhas from '../imagens/linhashomes.svg';
-import { NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import StatusServicoVisualizacao from './Componentes/StatusServicoVisualizacao';
 
 
-function Acompanhamento(){
+function AtualizacaoPedido(){
 
     const fases = [
         'Cliente trouxe o material a ser reparado?',
@@ -40,19 +40,19 @@ function Acompanhamento(){
             </div>
 
             <section className={Style.fimDetalhes}>
-            <NavLink to='#'>
-                <button className={Style.btConfirmar2} type="submit">
+            <Link to='/AvaliacaoCostureira'>
+                <button className={Style.btConfirmar2}>
                     CONFIRMAR!
                 </button>
-            </NavLink>
+            </Link>
 
-           <NavLink to='#' > 
-                <button className={Style.btCancelar2} type="submit">
+           <Link to='/EncontreCostureiro' > 
+                <button className={Style.btCancelar2}>
                     
                     CANCELAR COSTURA
                 
                 </button>
-           </NavLink>
+           </Link>
             </section>
 
         </section>
@@ -61,4 +61,4 @@ function Acompanhamento(){
     )
 }
 
-export default Acompanhamento;
+export default AtualizacaoPedido;

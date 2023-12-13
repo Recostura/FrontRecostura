@@ -5,6 +5,7 @@ import Style from '../pagesCliente/css/AvaliacaoCostureira.module.css';
 import botao from '../imagens/botaoUPCYCLE.png';
 import foto from '../imagens/imgperfilavaliacao.png';
 import fita from '../imagens/imgfitametrica.png';
+import { Link } from 'react-router-dom';
 
 const AvaliacaoCostureira = () => {
   const [avaliacao, setAvaliacao] = useState(null);
@@ -59,9 +60,11 @@ const AvaliacaoCostureira = () => {
             onChange={(e) => setComentario(e.target.value)}
         ></textarea>
 
+        <Link to='/EncontreCostureiro' > 
         <button className={Style.botaoenviaravaliacao} type="button" onClick={handleEnviarAvaliacao}>
             FINALIZAR RECOSTURA
         </button>
+        </Link>
 
         <p className={Style.ultimotexto}>Recosturando seus sonhos! </p>
 
