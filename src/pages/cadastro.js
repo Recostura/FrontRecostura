@@ -7,6 +7,10 @@ import Style from './css/cadastro.module.css'
 import FormularioDataNascimento from './Componentes/DataNascimento';
 import PasswordStrength from './Componentes/ForçaSenha';
 import { Link } from 'react-router-dom';
+import SenhaEmail from './Componentes/SenhaEmail';
+import InfoPessoal from './Componentes/pessoainfo';
+import InfoPessoalForm from './Componentes/cep';
+
 
 function Cadastro() {
     return(
@@ -19,64 +23,15 @@ function Cadastro() {
                 <img src={Button} alt='botões' />
             </div>
 
-            <section className={Style.forms1}>
-                <form className={Style.nomeSenha}>
-                    <input type="text" placeholder='E-mail:' className={Style.forms1_input} /> <br/>
-                    <input type="password" placeholder='Senha:' className={Style.forms1_input} /> <br />
-                    <PasswordStrength />
-                </form>
-            </section>
+            
+            <SenhaEmail/>
 
-            <section className={Style.forms2}>
-                <p className={Style.Ifpessoal_text}>Informações Pessoais</p>
-                <form className={Style.infoPessoal}>
-                    <input type="text" placeholder='Nome Completo:' className={Style.forms2_input} /> <br/>
-                    <input type="text" placeholder='Nome de Usuário:' className={Style.forms2_input} /> <br/>
-                    <input type="number" placeholder='CPF:' className={Style.forms2_input} /> <br/>
+            <InfoPessoalForm/>
 
-                    <div className={Style.divNumero}>
-                        <div className={Style.ddd}>
-                            <p>+55</p>
-                        </div>
-                        <input type="number" placeholder='Celular:' className={Style.clienteNumero}/> <br/>
-                    </div>
-                    <FormularioDataNascimento />
-                </form>
-            </section>
+            <FormularioDataNascimento />
 
-            <section className={Style.forms3}>
-                <p className={Style.text1}>Localizaçao</p>
-                <forms className={Style.localizacao}>
-                    <div className={Style.CPE}>
-                        <input type="text" placeholder='CPE:' className={Style.ceep}/> <br/>
-                        <input type="text" placeholder='Endereço:' className={Style.endereço}/> <br/>
-                    </div> <br />
-
-                    <div className={Style.nBairro}>
-                        <input type="text" placeholder='Nº:' className={Style.Nº}/> <br/>
-                        <input type="text" placeholder='Bairro:' className={Style.bairro}/> <br/>
-                    </div> <br />
-                    <div className={Style.estadoP}>
-                        <input type="text" placeholder='Estado:' className={Style.estado}/> <br/>
-                        <div className={Style.areaPaís}>
-                            <select name="mes" className={Style.país}>
-                            <option value="">País</option>
-                            <option value="1">Argentina</option>
-                            <option value="2">Bolívia</option>
-                            <option value="3">Brasil</option>
-                            <option value="4">Chile</option>
-                            <option value="5">Colômbia</option>
-                            <option value="6">Equador</option>
-                            <option value="7">Guiana</option>
-                            <option value="8">Paraguai</option>
-                            <option value="9">Peru</option>
-                            <option value="10">Surirame</option>
-                            <option value="11">Uruguai</option>
-                            <option value="12">Venezuela</option>
-                            </select>
-                        </div>
-                    </div> <br />
-                </forms> 
+            <InfoPessoal/>
+   
 
                 <div className={Style.bonus}>
                    <div className={Style.paragraph}>
@@ -86,7 +41,7 @@ function Cadastro() {
                         < img src={info} alt='ponto de interrogação' />
                    </div>
                 </div>   
-            </section>
+        
 
             <section className={Style.forms4}>
                 <forms className={Style.checkbox}>

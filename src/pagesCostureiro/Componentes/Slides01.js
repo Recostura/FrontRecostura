@@ -5,6 +5,7 @@ import img2 from '../../imagens/imgcarrousel2.svg';
 import img3 from '../../imagens/imgcarrousel3.svg';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Style from './css/Slide.module.css'
+import { Link } from 'react-router-dom';
 
 const Carousel1 = () => {
   return (
@@ -16,7 +17,9 @@ const Carousel1 = () => {
           alt="Primeiro Slide"
         />
         <Carousel.Caption>
-          <button className={Style.buttonCarrousel}>CONTRATE</button>
+          <Link to='/DetalhesDoPedido'>
+            <button className={Style.buttonCarrousel}>CONTRATE</button>
+          </Link>
         </Carousel.Caption>
       </Carousel.Item>
 
@@ -27,7 +30,9 @@ const Carousel1 = () => {
           alt="Segundo Slide"
         />
         <Carousel.Caption>
-          <button  className={Style.buttonCarrousel}>CONTRATE</button>
+          <Link to='/DetalhesDoPedido'>
+            <button className={Style.buttonCarrousel}>CONTRATE</button>
+          </Link>
         </Carousel.Caption>
       </Carousel.Item>
 
@@ -38,7 +43,9 @@ const Carousel1 = () => {
           alt="Terceiro Slide"
         />
         <Carousel.Caption>
-          <button  className={Style.buttonCarrousel}>CONTRATE</button>
+          <Link to='/DetalhesDoPedido'>
+            <button className={Style.buttonCarrousel}>CONTRATE</button>
+          </Link>
         </Carousel.Caption>
       </Carousel.Item>
     </Carousel>

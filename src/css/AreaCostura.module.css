@@ -33,11 +33,10 @@
     height: auto;
 }
 .ConteinerMenor1 button {
-    background-color: #F5B087;
+    background-color: #FFB6C6;
     width: 50%;
     height: 30%;
     border-radius: 20px;
-    border: #F5B087 solid 1px;
     font-size: 2em;
     text-align: center;
 
@@ -45,7 +44,6 @@
 .ConteinerMenor1 button:hover{
     transition: 0.3s;
     background-color: #90B49D;
-    border: #FCD0C3 solid 1px;
 }
 .ConteinerMenor2{
     height: 66.389vh;
@@ -68,14 +66,12 @@
     width: 50%;
     height: 30%;
     border-radius: 20px;
-    border: #90B49D 1px solid;
     font-size: 2em;
     text-align: center;
 }
 .ConteinerMenor2 button:hover{
     transition: 0.3s;
-    background-color: #F5B087;
-    border: #8F9C92 1px solid;
+    background-color: #FFB6C6;
 }
 
 .linkao{

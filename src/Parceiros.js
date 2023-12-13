@@ -48,7 +48,6 @@ function Parceiros(){
             <div className={Style.caixaimgedesc}>
                 <p>TESTE</p>
                 <img src={unhcr} alt="" style={{width: '400px', height: '400px'}}/>
-                <img className={Style.linhacurvada} src={linhacurva} alt="linha"/>
             </div>
             <Footer/>
         </main>

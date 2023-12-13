@@ -7,8 +7,8 @@ import fotoperfil1 from '../imagens/imgperfilpedro.png';
 import fotoperfil2 from '../imagens/imgperfiljagua.png';
 import imgplanos from '../imagens/modalplanos.png';
 import adicionar from '../imagens/addperfil.png';
-import botao from '../imagens/botaoUPCYCLE.png';
 import imgref from '../imagens/addimgref.png';
+import { Link } from 'react-router-dom';
 
 // Componente para o Modal de Tipo de Serviço
 const TypeServiceModal = ({ show, handleClose, handleServiceSelection }) => {
@@ -23,6 +23,9 @@ const TypeServiceModal = ({ show, handleClose, handleServiceSelection }) => {
         </Button>
         <Button variant="primary" onClick={() => handleServiceSelection('Costura Complexa')}>
           Costura Complexa
+        </Button>
+        <Button variant="primary" onClick={() => handleServiceSelection('Pequenos Reparos')}>
+          Pequenos Reparos
         </Button>
       </Modal.Body>
       <Modal.Footer>
@@ -58,6 +61,7 @@ const SubscriptionPlansModal = ({ show, handleClose }) => {
 
 const CostureiroPerfil = () => {
   const [formData, setFormData] = useState({
+    valorservico: '',
     nome: '',
     usuario: '',
     comentario: '',
@@ -66,6 +70,18 @@ const CostureiroPerfil = () => {
     avaliacao1: '',
     avaliacao2: '',
   });
+
+  const handleValorServicoChange = (e) => {
+    const valor = e.target.value;
+
+    // Verifica se o valor contém apenas números
+    if (/^\d*$/.test(valor) || valor === '') {
+      setFormData((prevData) => ({
+        ...prevData,
+        valorservico: valor,
+      }));
+    }
+  };
 
   const [imagemSelecionada, setImagemSelecionada] = useState(null);
 
@@ -146,34 +162,39 @@ const CostureiroPerfil = () => {
     setImagemSelecionada(null);
   };
 
+  const handleInputChange = (e, field) => {
+    const value = e.target.value;
+    e.target.style.fontSize = '30px'; // Define o tamanho fixo do texto
+    setFormData({
+      ...formData,
+      [field]: value,
+    });
+
+    // Ajustar o estilo dinamicamente conforme o tamanho do texto digitado
+    e.target.style.fontSize = `${Math.max(30)}px`;
+  };
+
   return (
     <main className={Style.fundomain}>
       <HeaderLogada />
 
       <form className={Style.forms} onSubmit={handleSubmit}>
-        <div className={Style.profileContainer}>
+      <div className={Style.profileContainer}>
           <div className={Style.imageContainer}>
-            {imagemSelecionada ? (
-              <img
-                src={imagemSelecionada}
-                alt="Imagem do Perfil"
-                className={Style.imagemPerfil}
-                style={{ width: '300px', height: '400px' }}
+            <label className={Style.imgInputContainer} htmlFor="perfilImage">
+              <input
+                type="file"
+                accept=".png, .jpg, .jpeg, .gif"
+                id="perfilImage"
+                onChange={handleImageChange}
+                className={Style.customFileInput}
               />
-            ) : (
-              <>
-                <label className={Style.customFileInput}>
-                  <input
-                    type="file"
-                    accept=".png, .jpg, .jpeg, .gif"
-                    onChange={handleImageChange}
-                  />
-                  <img className={Style.addpf} src={adicionar} alt="Escolher Imagem" />
-                </label>
-              </>
-            )}
+              {imagemSelecionada && (
+                <img className={Style.imagemSelecionada1} src={imagemSelecionada} alt='Imagem do Perfil' />
+              )}
+              {!imagemSelecionada && <img className={`${Style.adicionarImage} adicionarImage`} src={adicionar} alt='Adicionar imagem' />}
+            </label>
           </div>
-
           <div className={Style.column1}>
             <h1 style={{ color: '#9F988F' }}>Seu Perfil</h1>
             <input
@@ -182,7 +203,7 @@ const CostureiroPerfil = () => {
               id="nome"
               name="nome"
               value={formData.nome}
-              onChange={(e) => setFormData({ ...formData, nome: e.target.value })}
+              onChange={(e) => handleInputChange(e, 'nome')}
               placeholder="Nome"
               required
             />
@@ -192,7 +213,7 @@ const CostureiroPerfil = () => {
               id="usuario"
               name="usuario"
               value={formData.usuario}
-              onChange={(e) => setFormData({ ...formData, usuario: e.target.value })}
+              onChange={(e) => handleInputChange(e, 'usuario')}
               placeholder="Nome de usuário"
               required
             />
@@ -209,26 +230,27 @@ const CostureiroPerfil = () => {
         </div>
 
         <div className={Style.column2}>
-          <h1 style={{ color: '#9F988F' }}>Meu Serviço</h1>
-          <div className={Style.tiposervicoContainer}>
-            <div className={Style.tiposervicoText}>
-              Tipo de Serviço: {formData.tiposervico}
-              <Button variant="primary" onClick={handleShowServiceModal}>
-                Selecionar
-              </Button>
-            </div>
-          </div>
-
-          <input
-            className={Style.valorservico}
-            type="text"
-            id="valorservico"
-            name="valorservico"
-            value={formData.valorservico}
-            onChange={(e) => setFormData({ ...formData, valorservico: e.target.value })}
-            placeholder="Valor do Serviço"
-          />
+      <h1 style={{ color: '#9F988F' }}>Meu Serviço</h1>
+      <div className={Style.tiposervicoContainer}>
+        <div className={Style.tiposervicoText}>
+          Tipo de Serviço: {formData.tiposervico}
+          <Button variant="primary" onClick={handleShowServiceModal}>
+            Selecionar
+          </Button>
         </div>
+      </div>
+
+      <input
+        className={`${Style.camponome} ${Style.valorservico}`}
+        type="text"
+        id="valorservico"
+        name="valorservico"
+        value={formData.valorservico}
+        onChange={handleValorServicoChange}
+        placeholder="Valor do Serviço"
+        style={{ fontSize: '30px' }} // Adicione esta linha para definir o tamanho da fonte
+      />
+    </div>
 
         <h1 className={Style.txtcarrosel}>
           Hora de divulgar o seu trabalho! <br />
@@ -286,7 +308,7 @@ const CostureiroPerfil = () => {
         </div>
 
         <div className={Style.avaliacaoContainer}>
-          <h1>Avaliação</h1>
+          <h1>Avaliações</h1>
 
           <div className={Style.avaliacaoItem}>
             <div className={Style.fotoNomeContainer}>
@@ -335,9 +357,12 @@ const CostureiroPerfil = () => {
             />
           </div>
 
-          <button type="submit" className={Style.avaliacaoBtn}>
-            BORA COSTURAR!
-          </button>
+          <Link to='/CostureiroServicos'>
+            <button type="submit" className={Style.avaliacaoBtn}>
+              <p>BORA COSTURAR!</p>
+            </button>
+          </Link>
+
         </div>
       </form>
 
