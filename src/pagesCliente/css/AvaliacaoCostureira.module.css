@@ -1,0 +1,68 @@
+.ContainerAvaliacao{
+    margin-top: 120px;
+    display: flex;
+    flex-direction: column;
+}
+
+.txtinicio{
+    width: 100%;
+    height: 180px;
+    background-color: aquamarine;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 50px;
+    background-color: #F4A77D;
+}
+
+.txtinicio img{
+    width: 80px;
+}
+
+.campofoto{
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 100px;
+}
+
+.nomecostureira{
+    font-size: 30px;
+}
+
+.caixacomentario{
+    width: 80%;
+    height: 90px;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    margin-top: 10px;
+    opacity: 0.8;
+    border-radius: 15px;
+    resize: none;
+    border: 1px solid black;
+}
+
+.caixacomentario::placeholder{
+    font-size: 30px;
+    position: relative;
+    top: 20px;
+    text-align: center;
+}
+
+.botaoenviaravaliacao{
+    width: 30%;
+    height: 90px;
+    margin: auto;
+    margin-top: 100px;
+    background-color: #9BC2A8;
+    border-radius: 30px;
+    font-size: 25px;
+}
+
+.ultimotexto{
+    padding: 30px;
+    margin-top: 30px;
+    font-size: 20px;
+}

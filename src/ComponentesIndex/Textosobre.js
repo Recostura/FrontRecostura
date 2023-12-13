@@ -4,7 +4,7 @@ function Textosobre() {
     return(
         <main>
             <div className={Style.caixatexto}>
-                <p>PIPIPI POPOPO</p>
+                <p>Conectando pessoas, <br></br> Recosturando seus sonhos!</p>
             </div>
         </main>
     )
