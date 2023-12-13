@@ -6,7 +6,7 @@ import info from '../imagens/interrogração.svg'
 import FormularioDataNascimento from '../pages/Componentes/DataNascimento';
 import Style from './css/cadastrocli.module.css';
 import EmailSenha from './Componentes/EmailSenha';
-import InfoPessoal from './Componentes/InfoPessoal';
+import InfoPessoal from './Componentes/Infopessoal';
 import Local from './Componentes/Local';
 import Foto from './Componentes/Foto';
 
