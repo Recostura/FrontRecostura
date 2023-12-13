@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Style from './css/pessoainfo.module.css';
+import FormularioDataNascimento from './DataNascimento';
 
 const InfoPessoalForm = () => {
   const [nomeCompleto, setNomeCompleto] = useState('');
@@ -105,6 +106,8 @@ const InfoPessoalForm = () => {
           {!numeroCelularValido && <p style={{ color: 'red' }}>Número de celular inválido</p>}
           <br />
         </div>
+
+        <FormularioDataNascimento />
       </form>
     </section>
   );

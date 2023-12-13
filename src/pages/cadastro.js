@@ -5,12 +5,9 @@ import Button from '../imagens/cadastroButtons.svg'
 import info from '../imagens/interrogração.svg'
 import Style from './css/cadastro.module.css'
 import FormularioDataNascimento from './Componentes/DataNascimento';
-import PasswordStrength from './Componentes/ForçaSenha';
-import { Link } from 'react-router-dom';
 import SenhaEmail from './Componentes/SenhaEmail';
-import InfoPessoal from './Componentes/pessoainfo';
-import InfoPessoalForm from './Componentes/cep';
-
+import InfoPessoalForm from './Componentes/pessoainfo';
+import Cep from './Componentes/cep';
 
 function Cadastro() {
     return(
@@ -30,11 +27,9 @@ function Cadastro() {
                 </form>
             </section>
 
-            <InfoPessoalForm/>
+            <InfoPessoalForm />
 
-            <FormularioDataNascimento />
-
-            <InfoPessoal/>
+            <Cep />
    
 
                 <div className={Style.bonus}>
