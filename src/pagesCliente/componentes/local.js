@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Style from '../css/local.module.css';
 
-const InfoPessoal = () => {
+const Local = () => {
   const [cep, setCep] = useState('');
   const [endereco, setEndereco] = useState('');
   const [bairro, setBairro] = useState('');
@@ -77,4 +77,4 @@ const InfoPessoal = () => {
   );
 };
 
-export default InfoPessoal;
+export default Local;

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Style from './css/cep.module.css';
 
-const InfoPessoal = () => {
+const Cep = () => {
   const [cep, setCep] = useState('');
   const [endereco, setEndereco] = useState('');
   const [bairro, setBairro] = useState('');
@@ -45,36 +45,59 @@ const InfoPessoal = () => {
 
   return (
     <section className={Style.forms3}>
-      <p className={Style.pa}>Localização</p>
+      <p className={Style.forms3_Text}>Localização</p>
+      
       <form className={Style.localizacao}>
-        <div className={Style.cep}>
+        <div className={Style.cep_rua}>
           <input
             type="text"
             placeholder="CEP:"
             className={Style.ceep}
             value={cep}
-            onChange={handleCepChange}
-          />
+            onChange={handleCepChange} />
           <br />
-        </div>
+
+          <input 
+            type="text" 
+            placeholder="Rua:" 
+            className={Style.rua} 
+            value={endereco} />
+          <br />
+        </div> <br />
 
         <div className={Style.nBairro}>
-        <input type="text" placeholder="Rua:" className={Style.rua} value={endereco} />
+          <input 
+            type="text" 
+            placeholder="Nº:" 
+            className={Style.Nº} />
           <br />
-          <input type="text" placeholder="Nº:" className={Style.N} />
+
+          <input 
+            type="text" 
+            placeholder="Bairro:" 
+            className={Style.bairro} 
+            value={bairro} />
           <br />
-          <input type="text" placeholder="Bairro:" className={Style.bairro} value={bairro} />
+        </div> <br />
+
+        <div className={Style.estado_país}>
+          <input 
+            type="text" 
+            placeholder="Estado:" 
+            className={Style.estado} 
+            value={estado} />
           <br />
-        </div>
-        <div className={Style.estadoP}>
-          <input type="text" placeholder="Estado:" className={Style.estado} value={estado} />
-          <br />
-          <input type="text" placeholder="País:" className={Style.pais} value={pais} />
+          <input 
+            type="text" 
+            placeholder="País:" 
+            className={Style.país} 
+            value={pais} />
           <br />
         </div>
       </form>
+
     </section>
   );
 };
 
-export default InfoPessoal;
+export default Cep;

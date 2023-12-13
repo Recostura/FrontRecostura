@@ -1,3 +1,17 @@
+<<<<<<< HEAD
+
+import Header from '../ComponentesIndex/Header';
+import Style from './css/Acompanhamento.module.css';
+
+function Acompanhamento() {
+    return(
+        <main>
+             <Header />
+            <div className={Style.caixatexto}>
+                <p>Tudo certo, agora é com você!</p>
+            </div>
+        </main>
+=======
 import HeaderLogada from '../pages/HeaderLogada';
 import Style from '../pagesCliente/css/Acompanhamento.module.css';
 import botao from '../imagens/cadastroButtons.svg';
@@ -58,6 +72,7 @@ function AtualizacaoPedido(){
         </section>
 
 
+>>>>>>> 4827312d60e2d52e9140e3767b52136f1bd5536e
     )
 }
 

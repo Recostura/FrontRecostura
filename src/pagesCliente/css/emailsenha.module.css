@@ -8,7 +8,7 @@
     border-radius: 20px;
     width: 600px;
     height: 64px;
-    margin-bottom: 10px;
+    margin-bottom: -20px;
     text-align: left;
     padding: 20px;
 }
@@ -38,8 +38,9 @@
 .passwordCriteria {
     display: flex;
     flex-direction: column; 
-    margin-left: 180px;
+    margin-left: 10px;
     margin-bottom: 0px;
+    margin-top: -60px;
   }
   
   

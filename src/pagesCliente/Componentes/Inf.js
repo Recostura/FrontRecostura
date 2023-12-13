@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Style from '../css/infopessoal.module.css';
 
-const InfoPessoalForm = () => {
+const Inf = () => {
   const [nomeCompleto, setNomeCompleto] = useState('');
   const [nomeUsuario, setNomeUsuario] = useState('');
   const [cpf, setCPF] = useState('');
@@ -110,4 +110,4 @@ const InfoPessoalForm = () => {
   );
 };
 
-export default InfoPessoalForm;
+export default Inf;

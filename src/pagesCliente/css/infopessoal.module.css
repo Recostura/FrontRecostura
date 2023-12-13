@@ -1,6 +1,5 @@
 .forms2{
-    width: 90%;
-    margin-left: 0px;
+    width: 1650px;
 }
 
 .tit{
@@ -18,12 +17,11 @@
 
 .br{
     background-color: #e4e4e4;
-    width: 60px;
-    height: 64px;
-    font-size: 27px;
+    width: 64px;
+    height: 60px;
+    font-size: 30px;
     border-radius: 20px 0 0 20px;
-    margin-left: 80px;
-    margin-top: 60px;
+    top: -90px;
 }
 
 .numero{
@@ -33,7 +31,7 @@
     margin-bottom: 10px;
     text-align: left;
     padding: 20px;
-    margin-top: -56px;
+    margin-top: -80px;
     display: flex;
     margin-left: 65px;
 }
