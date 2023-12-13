@@ -1,0 +1,75 @@
+.forms3{
+    width: 90%;
+    margin-left: -70px;
+    margin-top: 10px;
+}
+
+.pa{
+    font-size: 30px;
+}
+
+.ceep{
+    width: 310px;
+    height: 41px;
+    display: flex;
+    font-size: 20px;
+    margin-left: 80px;
+    border-radius: 20px;
+    text-align: left;
+    padding: 20px;
+}
+
+.rua{
+    width: 900px;
+    height: 41px;
+    display: flex;
+    font-size: 27px;
+    border-radius:20px;
+    margin-left: 400px;
+    margin-top: -85px;
+    padding: 20px;
+}
+
+.N{
+    width: 210px;
+    height: 41px;
+    display: flex;
+    font-size: 20px;
+    margin-left: 80px;
+    border-radius: 20px;
+    text-align: left;
+    padding: 20px;
+}
+
+.bairro{
+    width: 1000px;
+    height: 41px;
+    display: flex;
+    font-size: 27px;
+    border-radius:20px;
+    margin-left: 300px;
+    margin-top: -66px;
+    padding: 20px;
+}
+
+.estado{
+    width: 710px;
+    height: 41px;
+    display: flex;
+    font-size: 20px;
+    margin-left: 80px;
+    border-radius: 20px;
+    text-align: left;
+    padding: 20px;
+}
+
+.pais{
+    width: 500px;
+    height: 41px;
+    display: flex;
+    font-size: 27px;
+    border-radius:20px;
+    margin-left: 800px;
+    margin-top: -66px;
+    padding: 20px;
+}
