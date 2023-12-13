@@ -4,6 +4,7 @@ import logoHome from '../imagens/logoHome.svg';
 import user from '../imagens/user.png'
 import { NavLink } from "react-router-dom";
 import Modal from '../pages/Modal'
+import SobreNos from '../pagesCliente/SobreNos'
 
 function Header (){
     const [modalIsOpen, setModalIsOpen] = useState(false);
@@ -36,21 +37,27 @@ function Header (){
     }, []);
 
     return(
+
         <header className={`${Style.header} ${scrolled ? Style.scrolled : ""}`}>
             <img src={logoHome} className={Style.logoHome} />
             <div className={Style.nomeHome}>Recostura</div>
 
                         
-                        <span className={Style.caixasheader2}>Sobre Nós</span>
-                        
+            <NavLink to="/SobreNos" className={Style.caixasheader2}>
+        Sobre Nós
+      </NavLink>      
 
                     
             <span className={Style.caixasheader3}>Parceiros</span>
 
-            <span className={Style.caixasheader4}>Fale conosco</span>
+            <a href="https://linktr.ee/recostura?utm_source=qr_code" className={Style.caixasheader4}>
+        Fale conosco
+      </a>
 
             <button onClick={openModal} className={Style.btLogin}>ACESSE SUA CONTA</button>
             <Modal isOpen={modalIsOpen} onRequestClose={closeModal} />
+        
+        
         </header>
 
 
