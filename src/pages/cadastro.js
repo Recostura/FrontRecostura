@@ -6,7 +6,7 @@ import info from '../imagens/interrogração.svg'
 import Style from './css/cadastro.module.css'
 import FormularioDataNascimento from './Componentes/DataNascimento';
 import PasswordStrength from './Componentes/ForçaSenha';
-
+import { Link } from 'react-router-dom';
 
 function Cadastro() {
     return(

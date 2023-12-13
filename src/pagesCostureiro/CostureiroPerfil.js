@@ -1,17 +1,16 @@
-import React, { useState, useRef } from 'react';
-import { Modal, Button, Carousel } from 'react-bootstrap';
+import React, { useState } from 'react';
+import { Modal, Button } from 'react-bootstrap';
 import HeaderLogada from '../pages/HeaderLogada';
 import Style from '../pagesCostureiro/css/CostureiroPerfil.module.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import carroselpf1 from '../imagensCarrosel/CarroselPerfil (1).png';
-import carroselpf2 from '../imagensCarrosel/CarroselPerfil (2).png';
-import carroselpf3 from '../imagensCarrosel/CarroselPerfil (3).png';
 import fotoperfil1 from '../imagens/imgperfilpedro.png';
 import fotoperfil2 from '../imagens/imgperfiljagua.png';
 import imgplanos from '../imagens/modalplanos.png';
-import imgcaixaperfil from '../imagens/fundoimgperfil.png'
 import adicionar from '../imagens/addperfil.png';
+import botao from '../imagens/botaoUPCYCLE.png';
+import imgref from '../imagens/addimgref.png';
 
+// Componente para o Modal de Tipo de Serviço
 const TypeServiceModal = ({ show, handleClose, handleServiceSelection }) => {
   return (
     <Modal show={show} onHide={handleClose} className={Style.caixamodal}>
@@ -35,6 +34,7 @@ const TypeServiceModal = ({ show, handleClose, handleServiceSelection }) => {
   );
 };
 
+// Componente para o Modal de Planos de Assinatura
 const SubscriptionPlansModal = ({ show, handleClose }) => {
   return (
     <Modal show={show} onHide={handleClose} className={Style.caixamodal}>
@@ -95,20 +95,55 @@ const CostureiroPerfil = () => {
   const handleShowPlansModal = () => setShowPlansModal(true);
   const handleClosePlansModal = () => setShowPlansModal(false);
 
-  const handleNext = () => {
-    // Lógica para avançar no carrossel
+  const [imagem1, setImagem1] = useState('');
+  const [imagem2, setImagem2] = useState('');
+  const [imagem3, setImagem3] = useState('');
+
+  const [imagem1URL, setImagem1URL] = useState('');
+  const [imagem2URL, setImagem2URL] = useState('');
+  const [imagem3URL, setImagem3URL] = useState('');
+
+  const handleImagem1Change = (e) => {
+    const file = e.target.files[0];
+    setImagem1(file);
+    setImagem1URL(URL.createObjectURL(file));
   };
 
-  const handlePrev = () => {
-    // Lógica para retroceder no carrossel
+  const handleImagem2Change = (e) => {
+    const file = e.target.files[0];
+    setImagem2(file);
+    setImagem2URL(URL.createObjectURL(file));
   };
 
-  const carouselRef = useRef(null);
+  const handleImagem3Change = (e) => {
+    const file = e.target.files[0];
+    setImagem3(file);
+    setImagem3URL(URL.createObjectURL(file));
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log('Dados do formulário:', formData);
     // Lógica para enviar os dados do formulário para o servidor
+
+    // Limpar os campos após o envio
+    setFormData({
+      nome: '',
+      usuario: '',
+      comentario: '',
+      tiposervico: '',
+      valorservico: '',
+      avaliacao1: '',
+      avaliacao2: '',
+    });
+
+    setImagem1('');
+    setImagem2('');
+    setImagem3('');
+    setImagem1URL('');
+    setImagem2URL('');
+    setImagem3URL('');
+    setImagemSelecionada(null);
   };
 
   return (
@@ -117,7 +152,7 @@ const CostureiroPerfil = () => {
 
       <form className={Style.forms} onSubmit={handleSubmit}>
         <div className={Style.profileContainer}>
-        <div className={Style.imageContainer}>
+          <div className={Style.imageContainer}>
             {imagemSelecionada ? (
               <img
                 src={imagemSelecionada}
@@ -200,67 +235,54 @@ const CostureiroPerfil = () => {
           Coloque as melhores fotos:
         </h1>
 
-        <Carousel
-          id="carouselExampleControls"
-          className={Style.customCarousel}
-          ref={carouselRef}
-          interval={null} // Desativa o intervalo automático
-        >
-          <Carousel.Item>
-            <div className={Style.carouselRow}>
-              <img
-                className={`d-inline-block w-33 ${Style.carouselImage}`}
-                src={carroselpf1}
-                alt="Imagem 1"
+        <div className={Style.caixa3img}>
+          <div className={Style.inputContainer}>
+            <label className={Style.imgInputContainer} htmlFor="imagem1">
+              <input
+                type="file"
+                accept="image/*"
+                id="imagem1"
+                onChange={(e) => handleImagem1Change(e)}
+                style={{ display: 'none' }}
               />
-              <img
-                className={`d-inline-block w-33 ${Style.carouselImage}`}
-                src={carroselpf2}
-                alt="Imagem 2"
-              />
-              <img
-                className={`d-inline-block w-33 ${Style.carouselImage}`}
-                src={carroselpf3}
-                alt="Imagem 3"
-              />
-            </div>
-          </Carousel.Item>
-          <Carousel.Item>
-            <div className={Style.carouselRow}>
-              <img
-                className={`d-inline-block w-33 ${Style.carouselImage}`}
-                src={carroselpf1}
-                alt="Imagem 1"
-              />
-              <img
-                className={`d-inline-block w-33 ${Style.carouselImage}`}
-                src={carroselpf2}
-                alt="Imagem 2"
-              />
-              <img
-                className={`d-inline-block w-33 ${Style.carouselImage}`}
-                src={carroselpf3}
-                alt="Imagem 3"
-              />
-            </div>
-          </Carousel.Item>
-        </Carousel>
+              {imagem1URL && (
+                <img className={Style.imagemSelecionada} src={imagem1URL} alt='Imagem selecionada' />
+              )}
+              {!imagem1URL && <img src={imgref} alt='Adicionar imagem' />}
+            </label>
+          </div>
 
-        <div className={Style.carouselControls}>
-          <button
-            className={`btn ${Style.carouselControl}`}
-            type="button"
-            onClick={handlePrev}
-          >
-            Anterior
-          </button>
-          <button
-            className={`btn ${Style.carouselControl}`}
-            type="button"
-            onClick={handleNext}
-          >
-            Próximo
-          </button>
+          <div className={Style.inputContainer}>
+            <label className={Style.imgInputContainer} htmlFor="imagem2">
+              <input
+                type="file"
+                accept="image/*"
+                id="imagem2"
+                onChange={(e) => handleImagem2Change(e)}
+                style={{ display: 'none' }}
+              />
+              {imagem2URL && (
+                <img className={Style.imagemSelecionada} src={imagem2URL} alt='Imagem selecionada' />
+              )}
+              {!imagem2URL && <img src={imgref} alt='Adicionar imagem' />}
+            </label>
+          </div>
+
+          <div className={Style.inputContainer}>
+            <label className={Style.imgInputContainer} htmlFor="imagem3">
+              <input
+                type="file"
+                accept="image/*"
+                id="imagem3"
+                onChange={(e) => handleImagem3Change(e)}
+                style={{ display: 'none' }}
+              />
+              {imagem3URL && (
+                <img className={Style.imagemSelecionada} src={imagem3URL} alt='Imagem selecionada' />
+              )}
+              {!imagem3URL && <img src={imgref} alt='Adicionar imagem' />}
+            </label>
+          </div>
         </div>
 
         <div className={Style.avaliacaoContainer}>
@@ -295,7 +317,7 @@ const CostureiroPerfil = () => {
               </div>
             </div>
           </div>
-        
+
           <div className={Style.modalSection}>
             <Button variant="primary" onClick={handleShowPlansModal} className={Style.botaoassinatura}>
               Planos de Assinatura
