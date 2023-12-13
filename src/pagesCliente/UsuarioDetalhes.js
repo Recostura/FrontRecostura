@@ -132,15 +132,15 @@ const SuaPagina = () => {
             <p className={Style.imgrefp}>Imagens para referência : </p>
             
             <div className={Style.caixa3img}>
-              <div className={Style.inputContainer}>
-                <label className={Style.imgInputContainer}>
+            <div className={Style.inputContainer}>
+            <label className={Style.imgInputContainer} htmlFor="imagem1">
                   <input
                     type="file"
                     accept="image/*"
                     onChange={handleImagem1Change}
                   />
                   {imagem1URL && <img className={Style.imagemSelecionada} src={imagem1URL} alt='Imagem selecionada' />}
-                  {!imagem1URL && <img src={imgref} alt='Adicionar imagem' />}
+                  {!imagem1URL && <img src={imgref} alt='Adicionar imagem'/>}
                 </label>
               </div>
 

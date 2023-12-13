@@ -5,9 +5,12 @@ import Button from '../imagens/cadastroButtons.svg'
 import info from '../imagens/interrogração.svg'
 import Style from './css/cadastro.module.css'
 import FormularioDataNascimento from './Componentes/DataNascimento';
+import PasswordStrength from './Componentes/ForçaSenha';
+import { Link } from 'react-router-dom';
 import SenhaEmail from './Componentes/SenhaEmail';
-import InfoPessoalForm from './Componentes/pessoainfo';
-import InfoPessoal from './Componentes/cep';
+import InfoPessoal from './Componentes/pessoainfo';
+import InfoPessoalForm from './Componentes/cep';
+
 
 function Cadastro() {
     return(
