@@ -6,8 +6,6 @@ import FormularioDataNascimento from '../pages/Componentes/DataNascimento';
 import Style from './css/cadastrocli.module.css';
 import Senha from './Componentes/Senha';
 import Inf from './Componentes/Inf';
-import EmailSenha from './Componentes/EmailSenha';
-import InfoPessoal from './Componentes/Infopessoal';
 import Local from './Componentes/Local';
 import Foto from './Componentes/Foto';
 

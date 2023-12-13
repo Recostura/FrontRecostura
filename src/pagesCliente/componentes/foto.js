@@ -1,48 +1,53 @@
-import React, { useState } from 'react';
-import { useDropzone } from 'react-dropzone';
+import React, { useState, useRef } from 'react';
+import adicionar from '../images/addiperfil.png';
+import Style from '../css/foto.module.css';
 
 const Foto = () => {
-  const [foto, setFoto] = useState(null);
-  const [fotoURL, setFotoURL] = useState(null);
+  const [imagemSelecionada, setImagemSelecionada] = useState(null);
+  const inputRef = useRef(null);
 
-  const onDrop = (acceptedFiles) => {
-    const selectedFoto = acceptedFiles[0];
-    setFoto(selectedFoto);
+  const handleImageChange = (e) => {
+    const file = e.target.files[0];
 
-    const fotoURL = URL.createObjectURL(selectedFoto);
-    setFotoURL(fotoURL);
+    if (file) {
+      const urlImagem = URL.createObjectURL(file);
+      setImagemSelecionada(urlImagem);
+    }
   };
 
-  const { getRootProps, getInputProps, isDragActive } = useDropzone({ onDrop });
-
-  const handleClickFoto = () => {
-    // Abra a janela de seleção de arquivo quando a foto for clicada
-    document.getElementById('fotoInput').click();
+  const handleImageClick = () => {
+    inputRef.current.click();
   };
 
   return (
-    <div style={{ display: 'flex', alignItems: 'center', width: '500px', marginTop: '50px', marginLeft: '180px'}}>
-      <div {...getRootProps()} className={`dropzone ${isDragActive ? 'active' : ''}`}>
-        <input {...getInputProps()} id="fotoInput" style={{ display: 'none' }} />
-        {isDragActive ? (
-          <p>Solte a foto aqui...</p>
-        ) : (
-          <>
-            <p onClick={handleClickFoto}>Arraste e solte a foto aqui, ou clique para selecionar</p>
-            <div
-              style={{ marginLeft: '20px', width: '400px', height: '540px', overflow: 'hidden', borderRadius: '5px', cursor: 'pointer' }}
-              onClick={handleClickFoto}
-            >
-              {fotoURL && (
-                <img
-                  src={fotoURL}
-                  alt="Foto de perfil"
-                  style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-                />
-              )}
-            </div>
-          </>
-        )}
+    <div className={Style.profileContainer}>
+      <div className={Style.imageContainer}>
+        <label className={Style.imgInputContainer} onClick={handleImageClick}>
+          {imagemSelecionada ? (
+            <img
+              className={`${Style.imagemSelecionada1} ${Style.customFileInput}`}
+              src={imagemSelecionada}
+              alt="Imagem do Perfil"
+              style={{ width: '400px', height: '540px', objectFit: 'cover', borderRadius: '10px', cursor: 'pointer' }}
+            />
+          ) : (
+            <>
+              <img
+                className={`${Style.adicionarImage} adicionarImage`}
+                src={adicionar}
+                alt="Adicionar imagem"
+              />
+            </>
+          )}
+          <input
+            type="file"
+            accept=".png, .jpg, .jpeg, .gif"
+            onChange={handleImageChange}
+            className={Style.fileInput}
+            ref={inputRef}
+            style={{ display: 'none' }}
+          />
+        </label>
       </div>
     </div>
   );
