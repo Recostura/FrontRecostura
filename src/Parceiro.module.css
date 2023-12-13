@@ -1,0 +1,41 @@
+.txtinicio{
+    width: 100%;
+    height: 180px;
+    margin-top: 120px;
+    background-color: #FDDBDC;
+    font-size: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #413634;
+}
+
+.segundotexto{
+    width: 100%;
+    height: 300px;
+    background-color: #7BDAD7;
+    font-size: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+}
+
+.caixaimgedesc{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 600px;
+    font-size: 50px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 2;
+}
+
+.linhacurvada{
+    width: 100%;
+    position: absolute;
+    z-index: 1;
+    margin-top: 700px;
+}

@@ -13,45 +13,43 @@ function AreaPedidos() {
     return(
         <main>
             <HeaderLogada />
-            <div className={Style.buttonsAndFrase}>
-                <img src={Button} alt='botões' />
-                <p>Escolha um Serviço:</p>
-                < img src={Button} alt='botões' />
-            </div>
-
-            <section className={Style.conteudoPedidos}>
-
-                <div className={Style.carrousels}>
-
-                    <div className={Style.carrousel}>
-                        <span className={Style.perfil}>
-                            <img src={perfil1} alt='Imagem perfil. Pessoa Branca' />
-                            <p>@PIOULI</p>
-                        </span>
-                        <Carousel1 />
-                    </div>
-
-                    <div className={Style.carrousel}>
-                        <span className={Style.perfil}>
-                            <img src={perfil2} alt='Imagem perfil. Pessoa Branca' />
-                            <p>@PEDROCAS</p>
-                        </span>
-                        <Carousel2 />
-                    </div>
-
-                    <div className={Style.carrousel}>
-                        <span className={Style.perfil}>
-                            <img src={perfil3} alt='Imagem perfil. Pessoa Branca' />
-                            <p>@JAGUATIRICA</p>
-                        </span>
-                        <Carousel3 />
-                    </div>
-
-
+            <div className={Style.ContainerServicos}>
+                <div className={Style.buttonsAndFrase}>
+                    <img src={Button} alt='botões' />
+                    <p>Escolha um Serviço:</p>
+                    < img src={Button} alt='botões' />
                 </div>
 
-            </section>
+                <section className={Style.conteudoPedidos}>
 
+                    <div className={Style.carrousels}>
+
+                        <div className={Style.carrousel}>
+                            <span className={Style.perfil}>
+                                <img src={perfil1} alt='Imagem perfil. Pessoa Branca' />
+                                <p>@PIOULI</p>
+                            </span>
+                            <Carousel1 />
+                        </div>
+
+                        <div className={Style.carrousel}>
+                            <span className={Style.perfil}>
+                                <img src={perfil2} alt='Imagem perfil. Pessoa Branca' />
+                                <p>@PEDROCAS</p>
+                            </span>
+                            <Carousel2 />
+                        </div>
+
+                        <div className={Style.carrousel}>
+                            <span className={Style.perfil}>
+                                <img src={perfil3} alt='Imagem perfil. Pessoa Branca' />
+                                <p>@JAGUATIRICA</p>
+                            </span>
+                            <Carousel3 />
+                        </div>
+                    </div>
+                </section>
+            </div>
             <Footer />
         </main>
 

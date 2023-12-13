@@ -61,10 +61,10 @@ const InfoPessoalForm = () => {
 
   return (
     <section className={Style.forms2}>
-      <p className={Style.tit}>Informações Pessoais</p>
+      <p className={Style.Ifpessoal_text}>Informações Pessoais</p>
       <form className={Style.infoPessoal}>
         <input
-          className={Style.nome}
+          className={Style.forms2_input}
           type="text"
           placeholder="Nome Completo:"
           value={nomeCompleto}
@@ -73,7 +73,7 @@ const InfoPessoalForm = () => {
         <br />
 
         <input
-        className={Style.nome2}
+        className={Style.forms2_input}
           type="text"
           placeholder="Nome de Usuário:"
           value={nomeUsuario}
@@ -82,7 +82,7 @@ const InfoPessoalForm = () => {
         <br />
 
         <input
-        className={Style.cpf}
+        className={Style.forms2_input}
           type="text"
           placeholder="CPF:"
           value={cpf}
@@ -92,13 +92,13 @@ const InfoPessoalForm = () => {
         <br />
 
         <div className={Style.divNumero}>
-          <div className={Style.ddd}>
-            <p className={Style.br}>+55</p>
+          <div className={Style.dddPaís}>
+            <p>+55</p>
           </div>
           <input
             type="text"
             placeholder="Celular"
-            className={Style.numero}
+            className={Style.numeroUsuario}
             value={celular}
             onChange={handleCelularChange}
           />
