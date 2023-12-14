@@ -1,4 +1,3 @@
-
 import Header from '../ComponentesIndex/Header';
 import Footer from '../ComponentesIndex/Footer'
 import Button from '../imagens/cadastroButtons.svg'
@@ -8,6 +7,7 @@ import InfoPessoalForm from './Componentes/pessoainfo';
 import Cep from './Componentes/cep';
 import { Link } from "react-router-dom";
 import SenhaCadastro from './Componentes/SenhaCadastro';
+import SaldoBonus from './Componentes/SaldoBonus_Modal';
 
 
 function Cadastro() {
@@ -26,15 +26,8 @@ function Cadastro() {
             <InfoPessoalForm />
 
             <Cep />
-
-            <div className={Style.bonus}>
-                <div className={Style.paragraph}>
-                    <p>Saldo: R$30,00 (bonus)</p>
-                </div>
-                <div className={Style.buttonInfo}>
-                    < img src={info} alt='ponto de interrogação' />
-                </div>
-            </div>
+            
+            <SaldoBonus />
 
 
             <section className={Style.forms4}>
