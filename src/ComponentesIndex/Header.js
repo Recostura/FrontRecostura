@@ -6,7 +6,7 @@ import { NavLink } from "react-router-dom";
 import Modal from '../pages/Modal'
 import SobreNos from '../pagesCliente/SobreNos'
 
-function Header (){
+function Header() {
     const [modalIsOpen, setModalIsOpen] = useState(false);
 
     const openModal = () => {
@@ -22,7 +22,7 @@ function Header (){
     useEffect(() => {
         const handleScroll = () => {
             const scrollTop = window.pageYOffset;
-            if (scrollTop > 0){
+            if (scrollTop > 0) {
                 setScrolled(true);
             } else {
                 setScrolled(false);
@@ -30,34 +30,34 @@ function Header (){
         };
 
         window.addEventListener("scroll", handleScroll);
-        
+
         return () => {
             window.addEventListener("scroll", handleScroll);
         };
     }, []);
 
-    return(
+    return (
 
         <header className={`${Style.header} ${scrolled ? Style.scrolled : ""}`}>
             <img src={logoHome} className={Style.logoHome} />
             <div className={Style.nomeHome}>Recostura</div>
 
-                        
-            <NavLink to="/SobreNos" className={Style.caixasheader2}>
-        Sobre Nós
-      </NavLink>      
 
-                    
+            <NavLink to="/SobreNos" className={Style.caixasheader2}>
+                Sobre Nós
+            </NavLink>
+
+
             <span className={Style.caixasheader3}>Parceiros</span>
 
             <a href="https://linktr.ee/recostura?utm_source=qr_code" className={Style.caixasheader4}>
-        Fale conosco
-      </a>
+                Fale conosco
+            </a>
 
             <button onClick={openModal} className={Style.btLogin}>ACESSE SUA CONTA</button>
             <Modal isOpen={modalIsOpen} onRequestClose={closeModal} />
-        
-        
+
+
         </header>
 
 
