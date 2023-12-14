@@ -1,0 +1,63 @@
+.forms1{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
+}
+
+.nomeSenha{
+    width: 80%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.forms1_input{
+    width: 100%;
+    height: 64px;
+    border-radius: 30px;
+    border: 0;
+    font-size: 20px;
+    padding-left: 30px;
+}
+
+.passwordCriteriaa {
+    width: 25%;
+    height: 200px;
+    display: flex;
+    flex-direction: column; 
+    margin-left: -850px;
+    margin-bottom: 10px;
+    padding-left: 10px;
+    padding-top: -20px;
+    border-radius: 15px;
+    background-color: #F6F1EB;
+  }
+
+
+.passwordCriterion {
+    display: flex;
+    align-items: center; 
+    margin-bottom: -45px;
+}
+
+.passwordStrengthBar {
+    width: 200px; /* Ajusta a largura conforme necessário */
+    margin-left: 180px;
+    margin-top: -50px;
+}
+
+.passwordStrengthIndicator {
+    width: 100%;
+    height: 20px; /* Ajusta a altura conforme necessário */
+    border-radius: 20px; /* Borda arredondada */
+    appearance: none; /* Remove o estilo padrão do elemento */
+}
+
+.erro li{
+    font-size: 20px;
+    margin-left: 150px;
+}

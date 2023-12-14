@@ -2,10 +2,11 @@
 import './App.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Index from './pages';
-import Cadastro from './pages/cadastro';
+import Cadastro from './pages/Cadastro';
 import ClienteInicial from './pagesCliente/ClienteInicial';
 import ClientePedido from './pagesCliente/ClientePedido';
-import Acompanhamento from './pagesCliente/Acompanhamento';
+import Acompanhamentocliente from './pagesCliente/Acompanhamentocliente';
+import Acompanhamento from './pagesCliente/AtualizacaoPedido';
 import EncontreCostureiro from './pagesCliente/EncontreCostureiro';
 import CostureiroPerfil from './pagesCostureiro/CostureiroPerfil';
 import CostureiroServicos from './pagesCostureiro/CostureiroServicos';
@@ -17,6 +18,8 @@ import UsuarioDetalhes from './pagesCliente/UsuarioDetalhes';
 import CadastroCli from './pagesCliente/CadastroCli';
 import LocalizandoCostureiro from './pagesCliente/LocalizandoCostureiro';
 import Parceiros from './Parceiros';
+import AtualizacaoPedido from './pagesCliente/AtualizacaoPedido'
+import SobreNos from './pagesCliente/SobreNos';
 
 
 function App() {
@@ -31,6 +34,7 @@ function App() {
           <Route exact path='ClienteInicial' element={<ClienteInicial />} />
           <Route exact path='CientePedido' element={<ClientePedido />} />
           <Route exact path='EncontreCostureiro' element={<EncontreCostureiro />} />
+          <Route exact path='Acompanhamentocliente' element={<Acompanhamentocliente />} />
           <Route exact path='Acompanhamento' element={<Acompanhamento />} />
           <Route exact path='CostureiroPerfil' element={<CostureiroPerfil />} />
           <Route exact path='AvaliacaoCostureira' element={<AvaliacaoCostureira />} />
@@ -41,6 +45,9 @@ function App() {
           <Route exact path='UsuarioDetalhes' element={<UsuarioDetalhes />} />
           <Route exact path='LocalizandoCostureiro'element={<LocalizandoCostureiro />} />
           <Route exact path='Parceiros' element={<Parceiros />} />
+          <Route exact path='AtualizacaoPedido' element={<AtualizacaoPedido />} />
+          <Route exact path='SobreNos' element={<SobreNos />} />
+
 
 
         </Routes>

@@ -9,10 +9,10 @@ function AreaCostura() {
         <div className={Style.AreaCostura}>
             <div className={Style.Conteiner100}>
                 <div className={Style.ConteinerMenor1}>
-                    <button> <Link to='Cadastro' className={Style.linkao}>SOU COSTUREIRO </Link> </button>
+                    <button> <Link to='/Cadastro' className={Style.linkao}>SOU COSTUREIRO </Link> </button>
                 </div>
                 <div className={Style.ConteinerMenor2}>
-                    <button> <Link to='CadastroCli' className={Style.linkao}>BUSCAR COSTUREIRO  </Link></button> 
+                    <button> <Link to='/CadastroCli' className={Style.linkao}>BUSCAR COSTUREIRO  </Link></button> 
                 </div>
             </div>
             <img src={linhas} className={Style.linhahome}/>

@@ -33,6 +33,12 @@
     height: 18px;
 }
 
+.botaoImg{
+    position: absolute;
+    top: 110px;
+    right: 130px;
+}
+
 .caixaMVV{
     width: 90%;
     height: auto;

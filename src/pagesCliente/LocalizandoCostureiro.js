@@ -4,6 +4,7 @@ import React from 'react';
 import Style from '../pagesCliente/css/LocalizandoCostureiro.module.css';
 import HeaderLogada from '../pages/HeaderLogada';
 import botao from '../imagens/cadastroButtons.svg';
+import { Link } from 'react-router-dom';
 
 function LocalizandoCostureiro() {
   return (
@@ -34,8 +35,9 @@ function LocalizandoCostureiro() {
         </iframe>
             
          <input className={Style.inputCEP} type="text" placeholder="Digite seu CEP:" />
-        
+        <Link to="/EncontreCostureiro">
         <button className={Style.encontreButton}>ENCONTRE</button>
+        </Link>
        
       </div>
     </section>

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Style from '../css/emailsenha.module.css';
 
-const EmailSenha = () => {
+const Senha = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [confirmPassword, setConfirmPassword] = useState('');
@@ -202,4 +202,4 @@ const EmailSenha = () => {
     );
 };
 
-export default EmailSenha;
+export default Senha;

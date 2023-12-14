@@ -4,6 +4,7 @@ import HeaderLogada from '../pages/HeaderLogada';
 import Style from './css/UsuarioDetalhes.module.css';
 import botao from '../imagens/botaoUPCYCLE.png';
 import imgref from '../imagens/addimgref.png';
+import { Link } from 'react-router-dom';
 
 const TypeServiceModal = ({ show, handleClose, handleServiceSelection }) => {
   return (
@@ -277,8 +278,10 @@ const SuaPagina = () => {
                 </label>
               </div>
             </div>
-
-            <button className={Style.enviardetalhes} type="submit">TUDO CERTO!</button>
+          <Link to='/LocalizandoCostureiro' >
+            <button className={Style.enviardetalhes}>TUDO CERTO!</button>
+          </Link>
+        
         </form>
         </div>
     </main>

@@ -1,5 +1,6 @@
 import Style from './css/SobreNos.module.css';
 import Linha from './images/linha.svg';
+import botaoImg from './images/botaoimg.svg';
 import Missao from './images/missao.svg';
 import Visao from './images/visao.svg';
 import Valores from './images/valores.svg';
@@ -26,6 +27,7 @@ function SobreNos() {
 
             <section className={Style.mvv}>
                 <img src={Linha} alt='linha' className={Style.imglinha} />
+                <img src={botaoImg} alt='Imagem Botão' className={Style.botaoImg} />
 
                 <div className={Style.caixaMVV}>
                     <div className={Style.caixaprincipal}>
