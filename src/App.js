@@ -5,6 +5,7 @@ import Index from './pages';
 import Cadastro from './pages/Cadastro';
 import ClienteInicial from './pagesCliente/ClienteInicial';
 import ClientePedido from './pagesCliente/ClientePedido';
+import Acompanhamentocliente from './pagesCliente/Acompanhamentocliente';
 import Acompanhamento from './pagesCliente/AtualizacaoPedido';
 import EncontreCostureiro from './pagesCliente/EncontreCostureiro';
 import CostureiroPerfil from './pagesCostureiro/CostureiroPerfil';
@@ -32,6 +33,7 @@ function App() {
           <Route exact path='ClienteInicial' element={<ClienteInicial />} />
           <Route exact path='CientePedido' element={<ClientePedido />} />
           <Route exact path='EncontreCostureiro' element={<EncontreCostureiro />} />
+          <Route exact path='Acompanhamentocliente' element={<Acompanhamentocliente />} />
           <Route exact path='Acompanhamento' element={<Acompanhamento />} />
           <Route exact path='CostureiroPerfil' element={<CostureiroPerfil />} />
           <Route exact path='AvaliacaoCostureira' element={<AvaliacaoCostureira />} />
