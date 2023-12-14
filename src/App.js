@@ -18,6 +18,7 @@ import CadastroCli from './pagesCliente/CadastroCli';
 import LocalizandoCostureiro from './pagesCliente/LocalizandoCostureiro';
 import Parceiros from './Parceiros';
 import AtualizacaoPedido from './pagesCliente/AtualizacaoPedido'
+import SobreNos from './pagesCliente/SobreNos';
 
 
 function App() {
@@ -43,6 +44,7 @@ function App() {
           <Route exact path='LocalizandoCostureiro'element={<LocalizandoCostureiro />} />
           <Route exact path='Parceiros' element={<Parceiros />} />
           <Route exact path='AtualizacaoPedido' element={<AtualizacaoPedido />} />
+          <Route exact path='SobreNos' element={<SobreNos />} />
 
 
 

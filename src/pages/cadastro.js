@@ -1,8 +1,7 @@
 import Header from '../ComponentesIndex/Header';
 import Footer from '../ComponentesIndex/Footer'
 import Button from '../imagens/cadastroButtons.svg'
-import info from '../imagens/interrogração.svg'
-import Style from './css/Cadastro.module.css'
+import Style from './css/Cadastro.module.css';
 import InfoPessoalForm from './Componentes/pessoainfo';
 import Cep from './Componentes/cep';
 import { Link } from "react-router-dom";
