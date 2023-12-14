@@ -18,7 +18,7 @@ import HeaderLogada from '../pages/HeaderLogada';
 import Footer from '../ComponentesIndex/Footer';
 
 function SobreNos() {
-    return(
+    return (
         <main className={Style.sobreNos}>
             <HeaderLogada />
             <dvi className={Style.titulo}>
@@ -33,22 +33,40 @@ function SobreNos() {
                     <div className={Style.caixaprincipal}>
                         <img src={Missao} alt='imagem alvo' />
                         <div className={Style.textMVV}>
+
                             <h3>Missão</h3>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                            <p>Superar os desafios enfrentados
+                                pelos costureiros,
+                                proporcionando oportunidades
+                                de trabalho e reconhecimento.
+                            </p>
+
                         </div>
                     </div>
                     <div className={Style.caixaprincipal}>
                         <img src={Visao} alt='imagem alvo' />
                         <div className={Style.textMVV}>
+
                             <h3>Visão</h3>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                            <p>A criação de uma plataforma
+                                onde costureiros e clientes se
+                                conectam de maneira eficiente,
+                                gerando renda e apoio.
+                            </p>
+
                         </div>
                     </div>
                     <div className={Style.caixaprincipal}>
                         <img src={Valores} alt='imagem alvo' />
                         <div className={Style.textMVV}>
+
                             <h3>Valores</h3>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                            <p>Transformação social e
+                                econômica, pois a plataforma
+                                não é apenas sobre reparos,
+                                mas sobre criar oportunidades.
+                            </p>
+                            
                         </div>
                     </div>
                 </div>
@@ -72,7 +90,7 @@ function SobreNos() {
                     <p>EQUIPE</p>
                     <img src={Agulha} alt='agulha e linha' />
                 </div>
-                
+
                 <div className={Style.conteudoImg}>
 
                     <div className={Style.imagens}>

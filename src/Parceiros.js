@@ -26,27 +26,27 @@ function Parceiros(){
             </div>
             <img src={linha} alt="linha" style={{backgroundColor: '#7BDAD7'}}/>
             <div className={Style.caixaimgedesc}>
-                <p>TESTE</p>
+                <p>Descarte consciente, praticidade e redirecionamento correto.</p>
                 <img src={upcycle} alt="" style={{width: '400px', height: '400px'}}/>
                 <img className={Style.linhacurvada} src={linhacurva} alt="linha"/>
             </div>
             <div className={Style.caixaimgedesc}>
                 <img src={ajeitala} alt="" style={{width: '400px', height: '400px'}}/>
-                <p>TESTE</p>
+                <p> A máquina de costura quebrou? Ajeita Lar arrumou!</p>
                 <img className={Style.linhacurvada} src={linhacurva} alt="linha"/>
             </div>
             <div className={Style.caixaimgedesc}>
-                <p>TESTE</p>
+                <p>A primeira e maior rede de apoio ao empreendedorismo feminino no Brasil</p>
                 <img src={imagem3} alt="" style={{width: '400px', height: '400px'}}/>
                 <img className={Style.linhacurvada} src={linhacurva} alt="linha"/>
             </div>
             <div className={Style.caixaimgedesc}>
                 <img src={imagem4} alt="" style={{width: '400px', height: '400px'}}/>
-                <p>TESTE</p>
+                <p>Acolhimento, valorização profissional e empregabilidade entre mulheres.</p>
                 <img className={Style.linhacurvada} src={linhacurva} alt="linha"/>
             </div>
             <div className={Style.caixaimgedesc}>
-                <p>TESTE</p>
+                <p>Empregabilidade de mulheres refugiadas, solicitantes de refúgio e migrantes no Brasil.</p>
                 <img src={unhcr} alt="" style={{width: '400px', height: '400px'}}/>
             </div>
             <Footer/>
