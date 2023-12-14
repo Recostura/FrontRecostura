@@ -72,15 +72,16 @@ const CostureiroPerfil = () => {
   });
 
   const handleValorServicoChange = (e) => {
-    const valor = e.target.value;
-
-    // Verifica se o valor contém apenas números
-    if (/^\d*$/.test(valor) || valor === '') {
-      setFormData((prevData) => ({
-        ...prevData,
-        valorservico: valor,
-      }));
-    }
+    let valor = e.target.value;
+  
+    // Garante que só há um cifrão no início do valor
+    valor = valor.replace(/[^0-9$]/g, ''); // Remove caracteres que não são números ou cifrões
+    valor = valor.replace(/^(\$*)/, ''); // Garante que há apenas um cifrão no início
+  
+    setFormData((prevData) => ({
+      ...prevData,
+      valorservico: valor,
+    }));
   };
 
   const [imagemSelecionada, setImagemSelecionada] = useState(null);
@@ -230,28 +231,27 @@ const CostureiroPerfil = () => {
         </div>
 
         <div className={Style.column2}>
-      <h1 style={{ color: '#9F988F' }}>Meu Serviço</h1>
-      <div className={Style.tiposervicoContainer}>
-        <div className={Style.tiposervicoText}>
-          Tipo de Serviço: {formData.tiposervico}
-          <Button variant="primary" onClick={handleShowServiceModal}>
-            Selecionar
-          </Button>
+          <h1 style={{ color: '#9F988F' }}>Meu Serviço</h1>
+          <div className={Style.tiposervicoContainer}>
+            <div className={Style.tiposervicoText}>
+              Tipo de Serviço: {formData.tiposervico}
+              <Button variant="primary" onClick={handleShowServiceModal}>
+                Selecionar
+              </Button>
+            </div>
+          </div>
+
+          <input
+            className={`${Style.camponome} ${Style.valorservico}`}
+            type="text"
+            id="valorservico"
+            name="valorservico"
+            value={formData.valorservico ? `R$${formData.valorservico}` : ''}
+            onChange={handleValorServicoChange}
+            placeholder="Valor do Serviço"
+            style={{ fontSize: '30px' }}
+          />
         </div>
-      </div>
-
-      <input
-        className={`${Style.camponome} ${Style.valorservico}`}
-        type="text"
-        id="valorservico"
-        name="valorservico"
-        value={formData.valorservico}
-        onChange={handleValorServicoChange}
-        placeholder="Valor do Serviço"
-        style={{ fontSize: '30px' }} // Adicione esta linha para definir o tamanho da fonte
-      />
-    </div>
-
         <h1 className={Style.txtcarrosel}>
           Hora de divulgar o seu trabalho! <br />
           Coloque as melhores fotos:
