@@ -2,7 +2,7 @@
 import './App.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Index from './pages';
-import Cadastro from './pages/Cadastro';
+import Cadastro from './pages/cadastro';
 import ClienteInicial from './pagesCliente/ClienteInicial';
 import ClientePedido from './pagesCliente/ClientePedido';
 import Acompanhamentocliente from './pagesCliente/Acompanhamentocliente';

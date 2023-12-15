@@ -93,7 +93,7 @@ const Inf = () => {
 
         <div className={Style.divNumero}>
           <div className={Style.ddd}>
-            <p className={Style.br}>+55</p>
+            <p>+55</p>
           </div>
           <input
             type="text"
