@@ -29,10 +29,14 @@ const SaldoBonus = () => {
             {modalAberto && (
                 <div className={Style.modalOverlay} onClick={fecharModal}>
                     <div className={Style.modalContent} onClick={(e) => e.stopPropagation()}>
-                       <div className={Style.textModal}>
+                        <div className={Style.textModal}>
                             <h2>Saldo Bonus</h2>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-                       </div>
+                            <p>A Recostura fica com apenas 10% do valor total do trabalho do costureiro como comissão, um valor pequenino, do tamanho de um botão. <br />
+                                O Saldo de $30 é apenas uma cortesia gratuita da plataforma para que você, costureiro, entenda como ela funciona e sinta-se a vontade para realizar seus primeiros serviços.
+                                <br /> Quando o saldo expirar, iremos te auxiliar para continuar recosturando seus sonhos!
+
+                            </p>
+                        </div>
                         <button onClick={fecharModal} className={Style.buttonModal}>
                             <img src={Fechar} alt='fechar' />
                         </button>
