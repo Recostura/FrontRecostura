@@ -8,7 +8,7 @@ import Senha from './Componentes/Senha';
 import Inf from './Componentes/Inf';
 import Local from './Componentes/Local';
 import Foto from './Componentes/Foto';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 
 function CadastroCli() {
     return(
@@ -45,8 +45,10 @@ function CadastroCli() {
                 </div>
                 </forms>
 
-                <button className={Style.conectar}>BORA RECOSTURAR!</button>
+                <NavLink to='/UsuarioDetalhes'><button className={Style.conectar}>BORA RECOSTURAR!</button></NavLink>
             </section>
+
+            
 
         <Footer/>
 

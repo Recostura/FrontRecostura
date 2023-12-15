@@ -48,7 +48,9 @@ function Header() {
             </NavLink>
 
 
-            <span className={Style.caixasheader3}>Parceiros</span>
+            <NavLink to='/Parceiros' className={Style.caixasheader3}>
+                Parceiros
+            </NavLink>
 
             <a href="https://linktr.ee/recostura?utm_source=qr_code" className={Style.caixasheader4}>
                 Fale conosco
