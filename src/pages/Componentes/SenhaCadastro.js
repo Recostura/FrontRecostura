@@ -132,6 +132,7 @@ const SenhaCadastro = () => {
                 <input
                     className={Style.forms1_input}
                     type="email"
+                    name="email"
                     placeholder="E-mail:"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
@@ -140,8 +141,9 @@ const SenhaCadastro = () => {
                 <br />
 
                 <input
-                    className={Style.forms1_input}
+                    className={Style.forms1_input} 
                     type="password"
+                    name="password"
                     placeholder="Senha:"
                     value={password}
                     onChange={handlePasswordChange}
@@ -152,6 +154,7 @@ const SenhaCadastro = () => {
                 <input
                     className={Style.forms1_input}
                     type="password"
+                    name="password"
                     placeholder="Senha:"
                     value={confirmPassword}
                     onChange={handleConfirmPasswordChange}
@@ -164,6 +167,7 @@ const SenhaCadastro = () => {
                         <div key={criterion.id} className={Style.passwordCriterion}>
                             <input
                                 type="checkbox"
+                                name="checkbox"
                                 id={criterion.id}
                                 checked={fulfilledCriteria[criterion.id]}
                                 readOnly
