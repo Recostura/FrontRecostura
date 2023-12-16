@@ -2,7 +2,7 @@
 import Header from '../ComponentesIndex/Header';
 import Footer from '../ComponentesIndex/Footer'
 import Button from '../imagens/cadastroButtons.svg'
-import FormularioDataNascimento from '../pages/Componentes/DataNascimento';
+import Data from './Componentes/Data';
 import Style from './css/cadastrocli.module.css';
 import Senha from './Componentes/Senha';
 import Inf from './Componentes/Inf';
@@ -27,7 +27,7 @@ function CadastroCli() {
 
             <Inf/>
 
-            <FormularioDataNascimento />
+            <Data />
 
             <Local/>
 

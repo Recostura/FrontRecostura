@@ -14,10 +14,10 @@ function AreaPedidos() {
         <main>
             <HeaderLogada />
             <div className={Style.ContainerServicos}>
-                <div className={Style.buttonsAndFrase}>
+            <div className={Style.buttonsAndFrase}>
                     <img src={Button} alt='botões' />
-                    <p>Escolha um Serviço:</p>
-                    < img src={Button} alt='botões' />
+                    <p>Vamos lá? <br /> Escolha um serviço:</p>
+                    <img src={Button} alt='botões' />
                 </div>
 
                 <section className={Style.conteudoPedidos}>
