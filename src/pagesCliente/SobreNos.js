@@ -16,6 +16,7 @@ import img8 from './images/img8.svg';
 import Agulha from './images/agulha.svg';
 import HeaderLogada from '../pages/HeaderLogada';
 import Footer from '../ComponentesIndex/Footer';
+import { Link } from 'react-router-dom';
 
 function SobreNos() {
     return (
@@ -66,7 +67,7 @@ function SobreNos() {
                                 não é apenas sobre reparos,
                                 mas sobre criar oportunidades.
                             </p>
-                            
+
                         </div>
                     </div>
                 </div>
@@ -95,7 +96,7 @@ function SobreNos() {
 
                     <div className={Style.imagens}>
                         <div className={Style.nomeFuncao}>
-                            <img src={img1} alt='menino' />
+                            <Link to='https://www.linkedin.com/in/anderson-soares-60a3b528a/' target="_blank" > <img src={img1} alt='menino' /> </Link>
                             <h4>Anderson Soarez</h4>
                             <div className={Style.Funcao}>
                                 <p>Scrum Master</p>
@@ -103,14 +104,18 @@ function SobreNos() {
                             </div>
                         </div>
                         <div className={Style.nomeFuncao}>
-                            <img src={img2} alt='menino' />
+                            <Link to='https://www.linkedin.com/in/beatriz-sanches-dev/' target="_blank" >
+                                <img src={img2} alt='menino' />
+                            </Link>
                             <h4>Beatriz Sanches</h4>
                             <div className={Style.Funcao2}>
                                 <p>Full Stack</p>
                             </div>
                         </div>
                         <div className={Style.nomeFuncao}>
-                            <img src={img3} alt='menino' />
+                            <Link to='https://www.linkedin.com/in/emili-pioli/' target="_blank" >
+                                <img src={img3} alt='menino' />
+                            </Link>
                             <h4>Emili Pioli</h4>
                             <div className={Style.Funcao}>
                                 <p>Product Owner</p>
@@ -118,7 +123,9 @@ function SobreNos() {
                             </div>
                         </div>
                         <div className={Style.nomeFuncao}>
-                            <img src={img4} alt='menino' />
+                            <Link to='www.linkedin.com/in/guilherme-araujo-888499268' target="_blank" >
+                                <img src={img4} alt='menino' />
+                            </Link>
                             <h4>Guilherme Cordeiro</h4>
                             <div className={Style.Funcao2}>
                                 <p>Front-End</p>
@@ -128,7 +135,9 @@ function SobreNos() {
 
                     <div className={Style.imagens}>
                         <div className={Style.nomeFuncao}>
-                            <img src={img5} alt='menino' />
+                            <Link to='https://www.linkedin.com/in/guilherme-mello-928837214/' target="_blank" >
+                                <img src={img5} alt='menino' />
+                            </Link>
                             <h4>Guilherme Mello</h4>
                             <div className={Style.Funcao}>
                                 <p>Scrum Master</p>
@@ -136,7 +145,9 @@ function SobreNos() {
                             </div>
                         </div>
                         <div className={Style.nomeFuncao}>
-                            <img src={img6} alt='menino' />
+                            <Link to='https://www.linkedin.com/in/jian-m-6303a0226/' target="_blank" >
+                                <img src={img6} alt='menino' />
+                            </Link>
                             <h4>Jian Magdiel</h4>
                             <div className={Style.Funcao}>
                                 <p>Financeiro</p>
@@ -144,14 +155,18 @@ function SobreNos() {
                             </div>
                         </div>
                         <div className={Style.nomeFuncao}>
-                            <img src={img7} alt='menino' />
+                            <Link to='https://www.linkedin.com/in/josé-victor-barros-fontes/' target="_blank" >
+                                <img src={img7} alt='menino' />
+                            </Link>
                             <h4>José Victor</h4>
                             <div className={Style.Funcao2}>
                                 <p>Full Stack</p>
                             </div>
                         </div>
                         <div className={Style.nomeFuncao}>
-                            <img src={img8} alt='menino' />
+                            <Link to='https://www.linkedin.com/in/pedro-augusto-91544b288/' target="_blank" >
+                                <img src={img8} alt='menino' />
+                            </Link>
                             <h4>Pedro Augusto</h4>
                             <div className={Style.Funcao2}>
                                 <p>Full Stack</p>

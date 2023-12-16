@@ -43,8 +43,19 @@ function Header() {
             <div className={Style.nomeHome}>Recostura</div>
 
 
+<<<<<<< HEAD
                     
             <NavLink to="/Parceiros" className={Style.caixasheader3}>Parceiros</NavLink>
+=======
+            <NavLink to="/SobreNos" className={Style.caixasheader2}>
+                Sobre Nós
+            </NavLink>
+
+
+            <NavLink to='/Parceiros' className={Style.caixasheader3}>
+                Parceiros
+            </NavLink>
+>>>>>>> 6e034a7aa1273d669cbeabf6dfcc991e5d94891c
 
             <a href="https://linktr.ee/recostura?utm_source=qr_code" className={Style.caixasheader4}>
                 Fale conosco
