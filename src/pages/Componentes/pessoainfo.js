@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
 import Style from './css/pessoainfo.module.css';
-import FormularioDataNascimento from './DataNascimento';
 
-const InfoPessoalForm = () => {
-  const [nomeCompleto, setNomeCompleto] = useState('');
-  const [nomeUsuario, setNomeUsuario] = useState('');
-  const [cpf, setCPF] = useState('');
-  const [celular, setCelular] = useState('');
-  const [cpfValido, setCPFValido] = useState(true);
-  const [numeroCelularValido, setNumeroCelularValido] = useState(true);
+
+const InfoPessoalForm = ({nomeCompleto, setNomeCompleto, userName, setUserName, cpf, setCpf, cpfValido, setCPFValido, celular, numeroCelularValido, setNumeroCelularValido, setTelefone}) => {
+  // const [nomeCompleto, setNomeCompleto] = useState('');
+  // const [nomeUsuario, setNomeUsuario] = useState('');
+  // const [cpf, setCPF] = useState('');
+  // const [celular, setCelular] = useState('');
+  // const [cpfValido, setCPFValido] = useState(true);
+  // const [numeroCelularValido, setNumeroCelularValido] = useState(true);
 
   const validarCPF = (cpf) => {
     return cpf.replace(/[^\d]/g, '').length === 11;
@@ -43,7 +43,7 @@ const InfoPessoalForm = () => {
   const handleCelularChange = (e) => {
     const newCelular = e.target.value;
     const formattedCelular = formatarCelular(newCelular).slice(0, 15); // Limita a 15 caracteres após a formatação
-    setCelular(formattedCelular);
+    setTelefone(formattedCelular);
 
     const cleanedNumero = formattedCelular.replace(/[^\d]/g, '');
     const numeroValido = cleanedNumero.length === 11;
@@ -55,7 +55,7 @@ const InfoPessoalForm = () => {
   const handleCPFChange = (e) => {
     const newCPF = e.target.value;
     const formattedCPF = formatarCPF(newCPF).slice(0, 14); // Limita a 14 caracteres após a formatação
-    setCPF(formattedCPF);
+    setCpf(formattedCPF);
 
     setCPFValido(validarCPF(newCPF));
   };
@@ -77,8 +77,8 @@ const InfoPessoalForm = () => {
         className={Style.forms2_input}
           type="text"
           placeholder="Nome de Usuário:"
-          value={nomeUsuario}
-          onChange={(e) => setNomeUsuario(e.target.value)}
+          value={userName}
+          onChange={(e) => setUserName(e.target.value)}
         />
         <br />
 
@@ -107,7 +107,7 @@ const InfoPessoalForm = () => {
           <br />
         </div>
 
-        <FormularioDataNascimento />
+        
       </form>
     </section>
   );

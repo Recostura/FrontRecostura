@@ -12,7 +12,28 @@ import Carousel4 from '../pagesCliente/Componentes/Slide04';
 import Carousel5 from '../pagesCostureiro/Componentes/Slides02';
 import Carousel6 from '../pagesCostureiro/Componentes/Slides03';
 
+import React, {useEffect, useState} from 'react';
+
 function EncontreCostureiro(){
+
+    const[pessoas, setCostureiro]=useState([]);
+
+    useEffect(() => {
+      fetch("http://localhost:8080/recostura/getAll", {
+        method: "GET",
+        headers: {"Content-Type": "application/json"}
+      })
+  
+      .then(res=>res.json())
+  
+      .then((result)=>{
+        console.log(result)
+        setCostureiro(result)
+      } 
+      ).catch(error => console.log(error))
+  
+    },[])
+
     return(
         <div>
             <HeaderL />
@@ -29,36 +50,23 @@ function EncontreCostureiro(){
             <section className={Style.conteudoPedidos}>
 
                 <div className={Style.carrousels}>
+                    {/* {pessoas.map(pessoa =>(
+                         <div className={Style.carrousel}>
+                         <span className={Style.perfil}>
+                             <img src={fotoPerfil} alt='Imagem perfil. Pessoa Branca' />
+                             <p>{pessoa.userName}</p>
+                             <img className={Style.imgPlano} src={Agulha} alt='Agulha, simbolo da assinatura' />
+                         </span>
+                         <Rating />
+                         <Carousel4 />
+                     </div> 
 
-                    <div className={Style.carrousel}>
-                        <span className={Style.perfil}>
-                            <img src={fotoPerfil} alt='Imagem perfil. Pessoa Branca' />
-                            <p>@ARAUJO</p>
-                            <img className={Style.imgPlano} src={Agulha} alt='Agulha, simbolo da assinatura' />
-                        </span>
-                        <Rating />
-                        <Carousel4 />
-                    </div>
-
-                    <div className={Style.carrousel}>
-                        <span className={Style.perfil}>
-                            <img src={fotoPerfil3} alt='Imagem perfil. Pessoa Branca' />
-                            <p>@MELLINHO</p>
-                        </span>
-                        <Rating />
-                        <Carousel5 />
-                    </div>
-
-                    <div className={Style.carrousel}>
-                        <span className={Style.perfil}>
-                            <img src={fotoPerfil2} alt='Imagem perfil. Pessoa Branca' />
-                            <p>@BIOCAS</p>
-                        </span>
-                        <Rating />
-                        <Carousel6 />
-                    </div>
+                    ))} */}
 
 
+                   
+                   
+                        
                 </div>
 
             </section>

@@ -1,29 +1,30 @@
 import React, { useState } from 'react';
 import Style from './css/DataNascimento.module.css';
 
-const FormularioDataNascimento = () => {
-  const [dataNascimento, setDataNascimento] = useState({ dia: '', mes: '', ano: '' });
+const FormularioDataNascimento = ({DataNascimento, setDataNascimento}) => {
+  // const [dataNascimento, setDataNascimento] = useState({ dia: '', mes: '', ano: '' });
 
   const handleChange = (e) => {
     const { name, value } = e.target;
 
     // Validando se tem apenas digitoss
     if (/^\d+$/.test(value) || (name === 'mes' || name === 'ano')) {
-      const numericValue = parseInt(value, 10);
-      setDataNascimento({ ...dataNascimento, [name]: numericValue });
+      const numericValue = (value<10&&0 + "") + parseInt(value, 10);
+      console.log(numericValue)
+      setDataNascimento({ ...DataNascimento, [name]: String(numericValue)?.match(/\d+/g).join("") });
     }
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(dataNascimento);
+    console.log(DataNascimento);
   };
 
   return (
     <form onSubmit={handleSubmit} className={Style.formsDate}>
       <div className={Style.label1}>
         <label>Dia:</label>
-        <select name="dia" value={dataNascimento.dia} onChange={handleChange}  className={Style.areaData}>
+        <select name="dia" value={parseInt(DataNascimento.dia)} onChange={handleChange}  className={Style.areaData}>
           <option value="">Dia</option>
           {Array.from({ length: 31 }, (_, index) => index + 1).map((day) => (
             <option key={day} value={day}>
@@ -34,7 +35,7 @@ const FormularioDataNascimento = () => {
       </div>
       <div className={Style.label1}>
         <label>Mês:</label>
-        <select name="mes" value={dataNascimento.mes} onChange={handleChange} required className={Style.areaData}>
+        <select name="mes" value={parseInt(DataNascimento.mes)} onChange={handleChange} required className={Style.areaData}>
           <option value="">Mês</option>
           <option value="1">Janeiro</option>
           <option value="2">Fevereiro</option>
@@ -52,7 +53,7 @@ const FormularioDataNascimento = () => {
       </div>
       <div className={Style.label1}>
         <label>Ano:</label>
-        <select name="ano" value={dataNascimento.ano} onChange={handleChange} required className={Style.areaData}>
+        <select name="ano" value={parseInt(DataNascimento.ano)} onChange={handleChange} required className={Style.areaData}>
           <option value="">Ano</option>
           {Array.from({ length: 76 }, (_, index) => 1930 + index).map((year) => (
             <option key={year} value={year}>

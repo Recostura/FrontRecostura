@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import Style from './css/SenhaCadastro.module.css';
 
-const SenhaCadastro = () => {
-    const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
-    const [confirmPassword, setConfirmPassword] = useState('');
-    const [passwordStrength, setPasswordStrength] = useState(0);
+const SenhaCadastro = ({email, setEmail, password, setPassword, confirmPassword, setConfirmPassword, passwordStrength, setPasswordStrength}) => {
+    // const [email, setEmail] = useState('');
+    // const [password, setPassword] = useState('');
+    // const [confirmPassword, setConfirmPassword] = useState('');
+    // const [passwordStrength, setPasswordStrength] = useState(0);
     const [validationErrors, setValidationErrors] = useState({
         email: [],
         password: [],

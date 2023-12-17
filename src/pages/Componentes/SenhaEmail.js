@@ -2,10 +2,10 @@ import React, { useState } from 'react';
 import Style from './css/senhaemail.module.css';
 
 const SenhaEmail = () => {
-    const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
-    const [confirmPassword, setConfirmPassword] = useState('');
-    const [passwordStrength, setPasswordStrength] = useState(0);
+    // const [email, setEmail] = useState('');
+    // const [password, setPassword] = useState('');
+    // const [confirmPassword, setConfirmPassword] = useState('');
+    // const [passwordStrength, setPasswordStrength] = useState(0);
     const [validationErrors, setValidationErrors] = useState({
         email: [],
         password: [],
