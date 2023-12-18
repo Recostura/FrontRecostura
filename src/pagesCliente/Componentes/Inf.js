@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import Style from '../css/infopessoal.module.css';
 
-const Inf = ({nomeCompleto, setnomeCompleto, userName, setUserName, cpf, setCPF, cpfValido, setCPFValido, celular, numeroCelularValido, setNumeroCelularValido, setCelular}) => {
+const Inf = ({nomeCompleto, setnomeCompleto, userName, setUserName, cpf, setCpf, cpfValido, setCPFValido, celular, numeroCelularValido, setNumeroCelularValido, setTelefone}) => {
   // const [nomeCompleto, setnomeCompleto] = useState('');
   // const [userName, setUserName] = useState('');
   // const [cpf, setCpf] = useState('');
   // const [celular, setCelular] = useState('');
-  // const [cpfValido, setCPFValido] = useState(true);
+  // const [cpfValido, setCpfValido] = useState(true);
   // const [numeroCelularValido, setNumeroCelularValido] = useState(true);
 
   const validarCPF = (cpf) => {
@@ -42,7 +42,7 @@ const Inf = ({nomeCompleto, setnomeCompleto, userName, setUserName, cpf, setCPF,
   const handleCelularChange = (e) => {
     const newCelular = e.target.value;
     const formattedCelular = formatarCelular(newCelular).slice(0, 15); // Limita a 15 caracteres após a formatação
-    setCelular(formattedCelular);
+    setTelefone(formattedCelular);
 
     const cleanedNumero = formattedCelular.replace(/[^\d]/g, '');
     const numeroValido = cleanedNumero.length === 11;
@@ -54,7 +54,7 @@ const Inf = ({nomeCompleto, setnomeCompleto, userName, setUserName, cpf, setCPF,
   const handleCPFChange = (e) => {
     const newCPF = e.target.value;
     const formattedCPF = formatarCPF(newCPF).slice(0, 14); // Limita a 14 caracteres após a formatação
-    setCPF(formattedCPF);
+    setCpf(formattedCPF);
 
     setCPFValido(validarCPF(newCPF));
   };
@@ -110,4 +110,4 @@ const Inf = ({nomeCompleto, setnomeCompleto, userName, setUserName, cpf, setCPF,
   );
 };
 
-export default Inf
+export default Inf;

@@ -7,7 +7,7 @@ import Senha from './Componentes/Senha';
 import Inf from './Componentes/Inf';
 import Local from './Componentes/Local';
 import Foto from './Componentes/Foto';
-import { Link, NavLink } from 'react-router-dom';
+import { Link, NavLink, useNavigate } from 'react-router-dom';
 import React, { useState } from 'react';
 
 function CadastroCli() {
@@ -33,6 +33,7 @@ function CadastroCli() {
     const [bairro, setBairro] = useState('');
     const [estado, setEstado] = useState('');
     const [pais, setPais] = useState('');
+    const navigate = useNavigate();
   
     
 
@@ -65,6 +66,7 @@ function CadastroCli() {
             setEstado('')
             setPais ('')
 
+            navigate('/UsuarioDetalhes')
         }catch(error){
             alert(`Erro no cadastro. Tente novamente. \nCodigo Erro: ${error}`);
           }
@@ -140,7 +142,7 @@ function CadastroCli() {
                 </div>
                 </forms>
 
-                <NavLink to='/UsuarioDetalhes'><button onClick={clicar} className={Style.conectar}>BORA RECOSTURAR!</button></NavLink>
+                <button onClick={clicar} className={Style.conectar}>BORA RECOSTURAR!</button>
             </section>
 
         <Footer/>
