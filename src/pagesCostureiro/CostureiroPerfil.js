@@ -147,7 +147,7 @@ const CostureiroPerfil = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log('Dados do formulário:', formData);
-
+ //vish kk
     // Lógica para enviar os dados do formulário para o servidor
       fetch("http://localhost:8080/recostura/profissional", {
         method: "POST",
