@@ -60,12 +60,8 @@
     gap: 20px;
 }
 
-.linkButton{
-    width: 50%;
-}
-
 .conectar{
-    width: 100%;
+    width: 50%;
     height: 120px;
     margin: 70px 0;
     border-radius: 40px;

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Modal, Button } from 'react-bootstrap';
 import HeaderLogada from '../pages/HeaderLogada';
 import Style from '../pagesCostureiro/css/CostureiroPerfil.module.css';
@@ -8,7 +8,7 @@ import fotoperfil2 from '../imagens/imgperfiljagua.png';
 import imgplanos from '../imagens/modalplanos.png';
 import adicionar from '../imagens/addperfil.png';
 import imgref from '../imagens/addimgref.png';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 // Componente para o Modal de Tipo de Serviço
 const TypeServiceModal = ({ show, handleClose, handleServiceSelection }) => {
@@ -18,13 +18,13 @@ const TypeServiceModal = ({ show, handleClose, handleServiceSelection }) => {
         <Modal.Title>Selecione o tipo de serviço</Modal.Title>
       </Modal.Header>
       <Modal.Body>
-        <Button variant="primary" onClick={() => handleServiceSelection('Costura Geral')}>
+        <Button variant="primary" onClick={() => handleServiceSelection('SERVICOS_COSTURAS_GERAL')}>
           Costura Geral
         </Button>
-        <Button variant="primary" onClick={() => handleServiceSelection('Costura Complexa')}>
+        <Button variant="primary" onClick={() => handleServiceSelection('SERVICO_COSTURA_COMPLEXA')}>
           Costura Complexa
         </Button>
-        <Button variant="primary" onClick={() => handleServiceSelection('Pequenos Reparos')}>
+        <Button variant="primary" onClick={() => handleServiceSelection('SERVICO_PEQUENOS_REPAROS')}>
           Pequenos Reparos
         </Button>
       </Modal.Body>
@@ -59,19 +59,26 @@ const SubscriptionPlansModal = ({ show, handleClose }) => {
   );
 };
 
+
 const CostureiroPerfil = () => {
   const [formData, setFormData] = useState({
-    valorservico: '',
     nome: '',
-    usuario: '',
-    comentario: '',
-    tiposervico: '',
-    valorservico: '',
+    userName: '',
+    biografia: '',
+    servicoOferecido: '',
+    mediaValor: '',
     avaliacao1: '',
     avaliacao2: '',
   });
+  const navigate = useNavigate();
 
-  const handleValorServicoChange = (e) => {
+  useEffect (()=>{
+    var nomeCompleto = localStorage.getItem("nomeCompleto");
+    var userName = localStorage.getItem("userName");
+    setFormData({...formData, nome: nomeCompleto, userName: userName});
+  }, []);
+
+  const handlemediaValorChange = (e) => {
     let valor = e.target.value;
   
     // Garante que só há um cifrão no início do valor
@@ -80,12 +87,11 @@ const CostureiroPerfil = () => {
   
     setFormData((prevData) => ({
       ...prevData,
-      valorservico: valor,
+      mediaValor: valor,
     }));
   };
 
   const [imagemSelecionada, setImagemSelecionada] = useState(null);
-
   const handleImageChange = (e) => {
     const file = e.target.files[0];
 
@@ -104,7 +110,7 @@ const CostureiroPerfil = () => {
   const handleServiceSelection = (selectedService) => {
     setFormData((prevData) => ({
       ...prevData,
-      tiposervico: selectedService,
+      servicoOferecido: selectedService,
     }));
     handleCloseServiceModal();
   };
@@ -141,15 +147,26 @@ const CostureiroPerfil = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log('Dados do formulário:', formData);
+
     // Lógica para enviar os dados do formulário para o servidor
+      fetch("http://localhost:8080/recostura/profissional", {
+        method: "POST",
+        headers: {"Content-Type": "application/json"},
+        body: JSON.stringify(formData),
+
+      }).then(() =>{
+          console.log("certo graças a Deus")
+      })
+
+      navigate('/CostureiroServicos')
 
     // Limpar os campos após o envio
     setFormData({
       nome: '',
-      usuario: '',
-      comentario: '',
-      tiposervico: '',
-      valorservico: '',
+      userName: '',
+      biografia: '',
+      servicoOferecido: '',
+      mediaValor: '',
       avaliacao1: '',
       avaliacao2: '',
     });
@@ -175,6 +192,11 @@ const CostureiroPerfil = () => {
     e.target.style.fontSize = `${Math.max(30)}px`;
   };
 
+  const nameService = {
+    SERVICO_PEQUENOS_REPAROS: "Pequenos reparos",
+    SERVICOS_COSTURAS_GERAL: "Costura geral",
+    SERVICO_COSTURA_COMPLEXA: "Costura complexa"
+  }
   return (
     <main className={Style.fundomain}>
       <HeaderLogada />
@@ -198,6 +220,7 @@ const CostureiroPerfil = () => {
           </div>
           <div className={Style.column1}>
             <h1 style={{ color: '#9F988F' }}>Seu Perfil</h1>
+
             <input
               className={Style.camponome}
               type="text"
@@ -208,12 +231,13 @@ const CostureiroPerfil = () => {
               placeholder="Nome"
               required
             />
+
             <input
               className={Style.campousuario}
               type="text"
               id="usuario"
               name="usuario"
-              value={formData.usuario}
+              value={formData.userName}
               onChange={(e) => handleInputChange(e, 'usuario')}
               placeholder="Nome de usuário"
               required
@@ -222,8 +246,8 @@ const CostureiroPerfil = () => {
               className={Style.campocomentario}
               id="comentario"
               name="comentario"
-              value={formData.comentario}
-              onChange={(e) => setFormData({ ...formData, comentario: e.target.value })}
+              value={formData.biografia}
+              onChange={(e) => setFormData({ ...formData, biografia: e.target.value })}
               placeholder="Biografia"
               style={{ height: '200px', resize: 'none' }}
             ></textarea>
@@ -234,7 +258,7 @@ const CostureiroPerfil = () => {
           <h1 style={{ color: '#9F988F' }}>Meu Serviço</h1>
           <div className={Style.tiposervicoContainer}>
             <div className={Style.tiposervicoText}>
-              Tipo de Serviço: {formData.tiposervico}
+              Tipo de Serviço: {nameService[formData.servicoOferecido]}
               <Button variant="primary" onClick={handleShowServiceModal}>
                 Selecionar
               </Button>
@@ -246,8 +270,8 @@ const CostureiroPerfil = () => {
             type="text"
             id="valorservico"
             name="valorservico"
-            value={formData.valorservico ? `R$${formData.valorservico}` : ''}
-            onChange={handleValorServicoChange}
+            value={formData.mediaValor ? `R$${formData.mediaValor}` : ''}
+            onChange={handlemediaValorChange}
             placeholder="Valor do Serviço"
             style={{ fontSize: '30px' }}
           />
@@ -357,11 +381,9 @@ const CostureiroPerfil = () => {
             />
           </div>
 
-          <Link to='/CostureiroServicos'>
-            <button type="submit" className={Style.avaliacaoBtn}>
+            <button onClick={handleSubmit} type="submit" className={Style.avaliacaoBtn}>
               <p>BORA COSTURAR!</p>
             </button>
-          </Link>
 
         </div>
       </form>

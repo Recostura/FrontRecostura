@@ -5,7 +5,7 @@ import info from '../imagens/interrogração.svg'
 import Style from './css/Cadastro.module.css'
 import InfoPessoalForm from './Componentes/pessoainfo';
 import Cep from './Componentes/cep';
-import { Link } from "react-router-dom";
+import { Link, Navigate, useNavigate } from "react-router-dom";
 import SenhaCadastro from './Componentes/SenhaCadastro';
 import SaldoBonus from './Componentes/SaldoBonus_Modal';  
 import FormularioDataNascimento from './Componentes/DataNascimento';      
@@ -36,6 +36,7 @@ function Cadastro() {
     const [bairro, setBairro] = useState('');
     const [estado, setEstado] = useState('');
     const [pais, setPais] = useState('');
+    const navigate = useNavigate();
   
     
 
@@ -68,6 +69,10 @@ function Cadastro() {
             setEstado('')
             setPais ('')
 
+            localStorage.setItem("nomeCompleto", nomeCompleto);
+            localStorage.setItem("userName", userName);
+
+            navigate('/CostureiroPerfil')
         }catch(error){
             alert(`Erro no cadastro. Tente novamente. \nCodigo Erro: ${error}`);
           }
@@ -143,9 +148,8 @@ function Cadastro() {
                         <label for="coding"> Ao criar uma conta, você aceita e concorda com os <b>Termos Gerais e Condições de Uso</b> e que seus dados serão processados em<br /> conformidade com a da Recostura.</label>
                     </div>
                 </forms>
-                <Link to='/CostureiroPerfil' className={Style.linkButton}>
                     <button onClick={clicar} className={Style.conectar} >BORA COSTURAR!</button>
-                </Link>
+        
             </section>
 
             <Footer />
