@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import Style from '../css/local.module.css';
 
-const Local = () => {
-  const [cep, setCep] = useState('');
-  const [endereco, setEndereco] = useState('');
-  const [bairro, setBairro] = useState('');
-  const [estado, setEstado] = useState('');
-  const [pais, setPais] = useState('');
+const Local = ({cep, setCep, endereco, setEndereco, bairro, setBairro, estado, setEstado, pais, setPais}) => {
+  // const [cep, setCep] = useState('');
+  // const [endereco, setEndereco] = useState('');
+  // const [bairro, setBairro] = useState('');
+  // const [estado, setEstado] = useState('');
+  // const [pais, setPais] = useState('');
 
   useEffect(() => {
     const consultarCep = async () => {

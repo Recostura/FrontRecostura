@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import Style from '../css/emailsenha.module.css';
 
-const Senha = () => {
-    const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
-    const [confirmPassword, setConfirmPassword] = useState('');
-    const [passwordStrength, setPasswordStrength] = useState(0);
+const Senha = ({email, setEmail, password, setPassword, confirmPassword, setConfirmPassword, passwordStrength, setPasswordStrength}) => {
+    // const [email, setEmail] = useState('');
+    // const [password, setPassword] = useState('');
+    // const [confirmPassword, setConfirmPassword] = useState('');
+    // const [passwordStrength, setPasswordStrength] = useState(0);
     const [validationErrors, setValidationErrors] = useState({
         email: [],
         password: [],

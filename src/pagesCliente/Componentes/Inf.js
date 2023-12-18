@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import Style from '../css/infopessoal.module.css';
 
-const Inf = () => {
-  const [nomeCompleto, setNomeCompleto] = useState('');
-  const [nomeUsuario, setNomeUsuario] = useState('');
-  const [cpf, setCPF] = useState('');
-  const [celular, setCelular] = useState('');
-  const [cpfValido, setCPFValido] = useState(true);
-  const [numeroCelularValido, setNumeroCelularValido] = useState(true);
+const Inf = ({nomeCompleto, setnomeCompleto, userName, setUserName, cpf, setCPF, cpfValido, setCPFValido, celular, numeroCelularValido, setNumeroCelularValido, setCelular}) => {
+  // const [nomeCompleto, setnomeCompleto] = useState('');
+  // const [userName, setUserName] = useState('');
+  // const [cpf, setCpf] = useState('');
+  // const [celular, setCelular] = useState('');
+  // const [cpfValido, setCPFValido] = useState(true);
+  // const [numeroCelularValido, setNumeroCelularValido] = useState(true);
 
   const validarCPF = (cpf) => {
     return cpf.replace(/[^\d]/g, '').length === 11;
@@ -68,7 +68,7 @@ const Inf = () => {
           type="text"
           placeholder="Nome Completo:"
           value={nomeCompleto}
-          onChange={(e) => setNomeCompleto(e.target.value)}
+          onChange={(e) => setnomeCompleto(e.target.value)}
         />
         <br />
 
@@ -76,8 +76,8 @@ const Inf = () => {
         className={Style.nome2}
           type="text"
           placeholder="Nome de Usuário:"
-          value={nomeUsuario}
-          onChange={(e) => setNomeUsuario(e.target.value)}
+          value={userName}
+          onChange={(e) => setUserName(e.target.value)}
         />
         <br />
 
@@ -110,4 +110,4 @@ const Inf = () => {
   );
 };
 
-export default Inf;
+export default Inf
