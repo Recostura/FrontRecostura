@@ -63,5 +63,6 @@ li{
 }
 
 .obggui :hover{
-    background-color: #FFFAEB;
+    color: #FFFAEB;
+    transition: 1s all;
 }

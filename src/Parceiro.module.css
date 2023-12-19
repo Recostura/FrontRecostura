@@ -13,7 +13,7 @@
 .segundotexto {
     width: 100%;
     height: 300px;
-    background-color: rgba(123, 218, 215, 0.5); /* aqui o último valor (0.7) representa a opacidade */
+    background-color: rgba(123, 218, 215, 0.8); /* aqui o último valor (0.7) representa a opacidade */
     font-size: 45px;
     display: flex;
     justify-content: center;
@@ -21,8 +21,16 @@
     gap: 80px;
 }
 
+.linhacurvada{
+    width: 100%;
+    position: absolute;
+    z-index: -5;
+    margin-top: 20px;
+}
+
 .caixaimgedesc{
     display: flex;
+    position: relative;
     flex-direction: row;
     width: 100%;
     height: 600px;
@@ -33,9 +41,6 @@
     z-index: 2;
 }
 
-.linhacurvada{
-    width: 100%;
-    position: absolute;
-    z-index: 1;
-    margin-top: 700px;
+.caixaimgedesc p{
+    width: 50%;
 }
