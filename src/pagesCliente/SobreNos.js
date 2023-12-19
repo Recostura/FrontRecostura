@@ -21,7 +21,7 @@ import { Link } from 'react-router-dom';
 function SobreNos() {
     return (
         <main className={Style.sobreNos}>
-            
+            <HeaderLogada />
             <dvi className={Style.titulo}>
                 <h2>Quem faz o Recostura acontecer?</h2>
             </dvi>
@@ -175,7 +175,7 @@ function SobreNos() {
                     </div>
                 </div>
             </section>
-
+            <Footer />
         </main>
     )
 }

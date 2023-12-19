@@ -19,7 +19,7 @@ function EncontreCostureiro(){
     const[pessoas, setCostureiro]=useState([]);
 
     useEffect(() => {
-      fetch("http://localhost:8080/recostura/getAll", {
+      fetch("http://localhost:8080/recostura/pessoa/getAll", {
         method: "GET",
         headers: {"Content-Type": "application/json"}
       })
@@ -48,7 +48,6 @@ function EncontreCostureiro(){
 
 
             <section className={Style.conteudoPedidos}>
-
                 <div className={Style.carrousels}>
                     {/* {pessoas.map(pessoa =>(
                          <div className={Style.carrousel}>
