@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import Style from '../css/local.module.css';
+import Style from '../css/Local.module.css';
 
 const Local = ({cep, setCep, endereco, setEndereco, bairro, setBairro, estado, setEstado, pais, setPais}) => {
   // const [cep, setCep] = useState('');

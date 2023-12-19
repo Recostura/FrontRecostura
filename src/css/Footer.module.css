@@ -66,3 +66,7 @@ li{
     color: #FFFAEB;
     transition: 1s all;
 }
+
+.atendimento ul li{
+    margin-right: 50px;
+}
