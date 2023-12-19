@@ -45,7 +45,9 @@ function Header() {
             </NavLink>
             <div className={Style.nomeHome}>Recostura</div>
 
-
+            <NavLink to="/SobreNos" className={Style.caixasheader2}>
+        Sobre Nós
+      </NavLink>
                     
             <NavLink to="/Parceiros" className={Style.caixasheader3}>Parceiros</NavLink>
 
