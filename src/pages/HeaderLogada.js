@@ -27,7 +27,9 @@ function HeaderLogada() {
 
   return (
     <header className={`${Style.header} ${scrolled ? Style.scrolled : ''}`}>
-      <img src={logoHome} className={Style.logoHome} alt="Logo" />
+     <NavLink to="/" className={Style.logoLink}>
+                <img src={logoHome} className={Style.logoHome} alt="Logo" />
+            </NavLink>
       <div className={Style.nomeHome}>Recostura</div>
 
       <NavLink to="/SobreNos" className={Style.caixasheader2}>

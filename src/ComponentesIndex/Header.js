@@ -6,6 +6,7 @@ import { NavLink } from "react-router-dom";
 import Modal from '../pages/Modal'
 import SobreNos from '../pagesCliente/SobreNos'
 
+
 function Header() {
     const [modalIsOpen, setModalIsOpen] = useState(false);
 
@@ -39,7 +40,9 @@ function Header() {
     return (
 
         <header className={`${Style.header} ${scrolled ? Style.scrolled : ""}`}>
-            <img src={logoHome} className={Style.logoHome} />
+            <NavLink to="/" className={Style.logoLink}>
+                <img src={logoHome} className={Style.logoHome} alt="Logo" />
+            </NavLink>
             <div className={Style.nomeHome}>Recostura</div>
 
 
