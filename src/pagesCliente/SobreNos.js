@@ -141,7 +141,7 @@ function SobreNos() {
                             <h4>Guilherme Mello</h4>
                             <div className={Style.Funcao}>
                                 <p>Scrum Master</p>
-                                <p>Full Stack</p>
+                                <p>Back-end</p>
                             </div>
                         </div>
                         <div className={Style.nomeFuncao}>
@@ -151,7 +151,7 @@ function SobreNos() {
                             <h4>Jian Magdiel</h4>
                             <div className={Style.Funcao}>
                                 <p>Financeiro</p>
-                                <p>Front-End</p>
+                                <p>Full Stack</p>
                             </div>
                         </div>
                         <div className={Style.nomeFuncao}>

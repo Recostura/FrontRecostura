@@ -6,7 +6,7 @@ import Style from './css/cadastrocli.module.css';
 import Senha from './Componentes/Senha';
 import Inf from './Componentes/Inf';
 import Local from './Componentes/local';
-import Foto from './Componentes/foto';
+import Foto from './Componentes/Foto';
 import { Link, NavLink, useNavigate } from 'react-router-dom';
 import React, { useState } from 'react';
 
