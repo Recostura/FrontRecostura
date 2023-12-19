@@ -13,6 +13,7 @@
     align-items: center;
     justify-content: center;
     background: linear-gradient(265deg, #FDDBDC 16.33%, rgba(253, 219, 220, 0.00) 104.85%);
+    margin-top: 121px;
 }
 
 .titulo h2 {
@@ -35,7 +36,7 @@
 
 .botaoImg {
     position: absolute;
-    top: 110px;
+    top: 225px;
     right: 130px;
 }
 
@@ -184,7 +185,7 @@
 }
 
 .Funcao2 {
-    margin-bottom: 33px;
+    margin-bottom: 53px;
 }
 
 @media screen and (max-width: 768px) {
